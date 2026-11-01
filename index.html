@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GEARS. | Engenharia e Tecnologia Ambiental Open Source — Projeto T.U.L.I.P.A.</title>
+  <meta name="description" content="Startup de engenharia e tecnologia ambiental de Congonhas (MG). Criadora do T.U.L.I.P.A., sistema modular de purificação de ar urbano com filtragem mecânica e telemetria IoT aberta." />
+
+  <!-- Google Fonts: Space Grotesk (Headings), Inter (Body), JetBrains Mono (Engineering/Specs) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/logo-gears.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ========================================================================
+       HEADER / NAVEGAÇÃO
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- [PLACEHOLDER: Substituir por SVG/Imagem oficial quando enviado, caso deseje alterar o traçado Fibonacci] -->
+      <a href="#visao-geral" class="brand-logo" aria-label="GEARS. Página Inicial">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212 56" fill="none" role="img" aria-label="Logotipo GEARS. com engrenagem Fibonacci e ponto alinhado na base">
+          <g transform="translate(26, 28)">
+            <circle r="21" stroke="#0F3A4D" stroke-width="0.75" stroke-dasharray="2 2" opacity="0.35"/>
+            <circle r="13" stroke="#0F3A4D" stroke-width="0.75" opacity="0.25"/>
+            <path d="M -3.5 -21 L 3.5 -21 L 4.8 -16.5 L -4.8 -16.5 Z M -3.5 21 L 3.5 21 L 4.8 16.5 L -4.8 16.5 Z M -21 -3.5 L -21 3.5 L -16.5 4.8 L -16.5 -4.8 Z M 21 -3.5 L 21 3.5 L 16.5 4.8 L 16.5 -4.8 Z" fill="#0A192F"/>
+            <g transform="rotate(45)">
+              <path d="M -3.5 -21 L 3.5 -21 L 4.8 -16.5 L -4.8 -16.5 Z M -3.5 21 L 3.5 21 L 4.8 16.5 L -4.8 16.5 Z M -21 -3.5 L -21 3.5 L -16.5 4.8 L -16.5 -4.8 Z M 21 -3.5 L 21 3.5 L 16.5 4.8 L 16.5 -4.8 Z" fill="#0A192F"/>
+            </g>
+            <circle r="17.5" fill="#0A192F"/>
+            <circle r="13" fill="#FFFFFF"/>
+            <circle r="8" fill="#0F3A4D"/>
+            <circle r="3" fill="#FFFFFF"/>
+            <line x1="-13" y1="0" x2="-8" y2="0" stroke="#0A192F" stroke-width="1.5"/>
+            <line x1="8" y1="0" x2="13" y2="0" stroke="#0A192F" stroke-width="1.5"/>
+            <line x1="0" y1="-13" x2="0" y2="-8" stroke="#0A192F" stroke-width="1.5"/>
+            <line x1="0" y1="8" x2="0" y2="13" stroke="#0A192F" stroke-width="1.5"/>
+          </g>
+          <text x="58" y="49" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="38" letter-spacing="2.5" fill="#0A192F">GEARS</text>
+          <!-- Ponto final alinhado exatamente à base inferior da engrenagem (Y=49) -->
+          <rect x="193" y="42" width="7" height="7" fill="#0F3A4D"/>
+        </svg>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Navegação Principal">
+        <a href="#visao-geral" class="nav-link active">Visão Geral</a>
+        <a href="#solucao-tulipa" class="nav-link">Projeto T.U.L.I.P.A.</a>
+        <a href="#sobre-nos" class="nav-link">Sobre Nós &amp; Trajetória</a>
+        <a href="#parcerias" class="nav-link">Parcerias &amp; Investimento</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://github.com/gearsbr/gearsbr" target="_blank" rel="noopener noreferrer" class="github-pill" title="Repositório Open Source no GitHub">
+          <span>OPEN SOURCE // GITHUB</span>
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-label="Abrir menu de navegação">
+          MENU
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         SEÇÃO 1: HERO / VISÃO GERAL
+         ====================================================================== -->
+    <section class="hero" id="visao-geral">
+      <div class="container">
+        <div class="hero-telemetry-bar">
+          <span>ORIGEM: <strong>CONGONHAS, MG — BRASIL (20°29'59"S 43°51'28"W)</strong></span>
+          <span>FILOSOFIA: <strong>OPEN SOURCE HARDWARE &amp; TELEMETRIA TRANSPARENTE</strong></span>
+          <span>PROJETO PRINCIPAL: <strong>SISTEMA MODULAR T.U.L.I.P.A.</strong></span>
+        </div>
+
+        <div class="hero-grid">
+          <!-- Coluna Esquerda: Headline e Chamadas -->
+          <div class="hero-content">
+            <div class="hero-badges">
+              <span class="badge badge--opensource">ENGENHARIA ABERTA</span>
+              <span class="badge badge--environment">
+                <span class="badge__dot"></span>
+                MEIO AMBIENTE &amp; SUSTENTABILIDADE
+              </span>
+              <span class="badge badge--health">
+                <span class="badge__dot"></span>
+                SAÚDE PÚBLICA RESPIRATÓRIA
+              </span>
+            </div>
+
+            <!-- [PLACEHOLDER: Texto provisório do Hero — substituir pela headline final do usuário] -->
+            <h1 class="hero-title">
+              Engenharia de precisão para <span class="highlight-emerald">ar limpo</span> e <span class="highlight-mahogany">saúde urbana</span> em cidades mineradoras.
+            </h1>
+
+            <p class="hero-lead">
+              A <strong>GEARS.</strong> desenvolve infraestrutura ambiental de código aberto em Congonhas (MG). Nosso sistema modular <strong>T.U.L.I.P.A.</strong> acopla filtragem mecânica de alta eficiência e telemetria IoT auditável diretamente ao mobiliário urbano.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#solucao-tulipa" class="btn btn--primary">
+                Explorar Arquitetura T.U.L.I.P.A.
+              </a>
+              <a href="#parcerias" class="btn btn--outline">
+                Parcerias B2B / B2G &amp; Investimento
+              </a>
+            </div>
+
+            <!-- Faixa Dupla de Impacto (Esmeralda para Meio Ambiente | Rich Mahogany para Saúde) -->
+            <div class="hero-impact-strip">
+              <div class="impact-mini-card impact-mini-card--emerald">
+                <span class="impact-mini-card__label">Eixo Ambiental // Esmeralda</span>
+                <p class="impact-mini-card__text">
+                  Descontaminação atmosférica ativa e regeneração da qualidade do ar no entorno urbano e operacional.
+                </p>
+              </div>
+              <div class="impact-mini-card impact-mini-card--mahogany">
+                <span class="impact-mini-card__label">Eixo Saúde // Rich Mahogany</span>
+                <p class="impact-mini-card__text">
+                  Barreira mecânica contra material particulado em suspensão (PM2.5 e PM10) crítico em regiões mineradoras.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coluna Direita: Quadro Técnico CAD / Slot para Render Oficial do T.U.L.I.P.A. -->
+          <div class="hero-visual-frame">
+            <div class="frame-top-bar">
+              <span>CAD // MOD-TULIPA-REV.01</span>
+              <span>FIBONACCI GRID: 1:1.618</span>
+            </div>
+
+            <!-- [PLACEHOLDER: Substituir o SVG abaixo pelo Render 3D / Foto do protótipo T.U.L.I.P.A. quando enviado] -->
+            <div class="blueprint-canvas">
+              <svg class="blueprint-svg" viewBox="0 0 320 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Esquema técnico vetorial provisório do purificador urbano modular T.U.L.I.P.A.">
+                <!-- Linhas de cota e eixos técnicos -->
+                <line x1="160" y1="15" x2="160" y2="345" stroke="#0F3A4D" stroke-width="1" stroke-dasharray="4 4" opacity="0.45"/>
+                <line x1="30" y1="180" x2="290" y2="180" stroke="#0F3A4D" stroke-width="1" stroke-dasharray="4 4" opacity="0.45"/>
+
+                <!-- Coifa / Difusor Superior Aerodinâmico (Formato Tulipa) -->
+                <path d="M90 65 L230 65 L205 120 L115 120 Z" fill="#FFFFFF" stroke="#0A192F" stroke-width="2"/>
+                <path d="M105 65 L122 120 M215 65 L198 120" stroke="#047857" stroke-width="1.5"/>
+
+                <!-- Módulo Central de Filtragem Mecânica Multiestágio -->
+                <rect x="110" y="128" width="100" height="110" fill="#FFFFFF" stroke="#0A192F" stroke-width="2"/>
+                <!-- Estágios de Filtro Internos (Esmeralda & Mahogany indicando retenção) -->
+                <line x1="118" y1="152" x2="202" y2="152" stroke="#5C1620" stroke-width="3"/>
+                <line x1="118" y1="178" x2="202" y2="178" stroke="#047857" stroke-width="3"/>
+                <line x1="118" y1="204" x2="202" y2="204" stroke="#0F3A4D" stroke-width="2" stroke-dasharray="5 3"/>
+
+                <!-- Módulo Inferior de Telemetria IoT e Acoplamento Urbano -->
+                <rect x="120" y="246" width="80" height="64" fill="#0A192F"/>
+                <circle cx="160" cy="278" r="14" stroke="#10B981" stroke-width="1.8"/>
+                <circle cx="160" cy="278" r="4" fill="#10B981"/>
+
+                <!-- Setas de Fluxo de Ar -->
+                <path d="M72 150 L102 150" stroke="#5C1620" stroke-width="1.5"/>
+                <polygon points="102,147 108,150 102,153" fill="#5C1620"/>
+                <path d="M248 150 L218 150" stroke="#5C1620" stroke-width="1.5"/>
+                <polygon points="218,147 212,150 218,153" fill="#5C1620"/>
+
+                <path d="M140 55 L140 30" stroke="#047857" stroke-width="1.5"/>
+                <polygon points="137,32 140,24 143,32" fill="#047857"/>
+                <path d="M180 55 L180 30" stroke="#047857" stroke-width="1.5"/>
+                <polygon points="177,32 180,24 183,32" fill="#047857"/>
+
+                <!-- Rótulos Técnicos -->
+                <text x="22" y="142" font-family="'JetBrains Mono', monospace" font-size="8" fill="#5C1620">ENTRADA PM2.5/PM10</text>
+                <text x="112" y="18" font-family="'JetBrains Mono', monospace" font-size="8" fill="#047857">AR PURIFICADO</text>
+                <text x="126" y="328" font-family="'JetBrains Mono', monospace" font-size="8" fill="#0A192F">ACOPLAMENTO URBANO</text>
+              </svg>
+
+              <div class="asset-placeholder-notice">
+                [ESPAÇO RESERVADO PARA RENDER OFICIAL DO PROTÓTIPO T.U.L.I.P.A.]
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SEÇÃO 2: A SOLUÇÃO (PROJETO T.U.L.I.P.A.)
+         ====================================================================== -->
+    <section class="section section--surface" id="solucao-tulipa">
+      <div class="container">
+        <div class="section-header">
+          <span class="cad-marker">01 // ARQUITETURA DE HARDWARE &amp; IMPACTO</span>
+          <h2 class="section-title">A Solução: Projeto T.U.L.I.P.A.</h2>
+          <!-- [PLACEHOLDER: Substituir pela descrição técnica definitiva do T.U.L.I.P.A.] -->
+          <p class="section-subtitle">
+            Projetado para integração direta à infraestrutura de cidades mineradoras e centros industriais, o <strong>T.U.L.I.P.A.</strong> combina engenharia mecânica modular, fácil manutenção em campo e transparência de dados ambientais.
+          </p>
+        </div>
+
+        <!-- Barra de Identificação Técnica do T.U.L.I.P.A. -->
+        <div class="tulipa-acronym-bar">
+          <div>
+            <div class="tulipa-acronym-bar__title">SISTEMA MODULAR T.U.L.I.P.A.</div>
+            <p class="tulipa-acronym-bar__desc">
+              Purificação ativa acoplada à infraestrutura urbana + Filtragem Mecânica + Telemetria IoT Aberta
+            </p>
+          </div>
+          <span class="badge badge--opensource">HARDWARE MODULAR ABERTO</span>
+        </div>
+
+        <!-- Abas Interativas para Organização Técnica -->
+        <div class="tech-tabs" role="tablist" aria-label="Especificações do Projeto T.U.L.I.P.A.">
+          <button class="tech-tab-btn active" role="tab" aria-selected="true" data-tech-tab="visao-arquitetura">
+            01. Pilares de Engenharia &amp; Impacto
+          </button>
+          <button class="tech-tab-btn" role="tab" aria-selected="false" data-tech-tab="especificacoes-prototipo">
+            02. Ficha Técnica do Protótipo
+          </button>
+        </div>
+
+        <!-- Painel 1: Bento Grid de Engenharia (Meio Ambiente em Esmeralda, Saúde em Rich Mahogany, Engenharia em Azul-Petróleo) -->
+        <div class="tech-tab-panel active" data-tech-panel="visao-arquitetura">
+          <div class="bento-grid">
+            <!-- Card 1: Meio Ambiente (Esmeralda) -->
+            <article class="bento-card bento-card--col-6 bento-card--environment">
+              <div>
+                <div class="bento-card__meta">
+                  <span class="badge badge--environment">
+                    <span class="badge__dot"></span>
+                    CATEGORIA: MEIO AMBIENTE
+                  </span>
+                  <span>MOD-ENV // 01</span>
+                </div>
+                <h3 class="bento-card__title">Filtragem Mecânica &amp; Regeneração Urbana</h3>
+                <p class="bento-card__desc">
+                  Sistema de captação e retenção física de poluentes atmosféricos desenhado para operar em pontos estratégicos da malha urbana, corredores viários e perímetros de mineração sem gerar subprodutos químicos.
+                </p>
+              </div>
+              <ul class="spec-list spec-list--emerald">
+                <li><span>Princípio de Purificação</span><span>Filtragem Mecânica Multiestágio</span></li>
+                <li><span>Acoplamento Urbano</span><span>Postes, Totens e Mobiliário Existente</span></li>
+                <li><span>Ciclo de Vida</span><span>Cartuchos Modulares Substituíveis</span></li>
+              </ul>
+            </article>
+
+            <!-- Card 2: Saúde Pública (Rich Mahogany) -->
+            <article class="bento-card bento-card--col-6 bento-card--health">
+              <div>
+                <div class="bento-card__meta">
+                  <span class="badge badge--health">
+                    <span class="badge__dot"></span>
+                    CATEGORIA: SAÚDE HUMANA
+                  </span>
+                  <span>MOD-HLT // 02</span>
+                </div>
+                <h3 class="bento-card__title">Proteção Respiratória &amp; Redução de Particulados</h3>
+                <p class="bento-card__desc">
+                  Foco direto na mitigação da poeira mineral e material particulado fino (PM10 e PM2.5), reduzindo a exposição contínua de moradores, trabalhadores e estudantes a agentes agravantes de doenças cardiorrespiratórias.
+                </p>
+              </div>
+              <ul class="spec-list spec-list--mahogany">
+                <li><span>Alvo Primário de Retenção</span><span>Poeira Mineral, PM10 e PM2.5</span></li>
+                <li><span>Zonas Prioritárias</span><span>Escolas, Praças, Unidades de Saúde</span></li>
+                <li><span>Rastreabilidade Sanitária</span><span>Dados Auditáveis pela Comunidade</span></li>
+              </ul>
+            </article>
+
+            <!-- Card 3: Arquitetura Modular Open Source (Azul-Marinho / Petróleo) -->
+            <article class="bento-card bento-card--col-12 bento-card--engineering">
+              <div>
+                <div class="bento-card__meta">
+                  <span class="badge badge--opensource">ENGENHARIA GEARS. // OPEN SOURCE</span>
+                  <span>MOD-MEC // 03</span>
+                </div>
+                <h3 class="bento-card__title">Manufatura Acessível, Modularidade e Escalabilidade</h3>
+                <p class="bento-card__desc">
+                  Inspirado na precisão de empresas de engenharia moderna e na liberdade do hardware aberto, cada subsistema do <strong>T.U.L.I.P.A.</strong> é projetado para fácil montagem, manutenção rápida por equipes locais e replicabilidade técnica.
+                </p>
+              </div>
+              <ul class="spec-list">
+                <li><span>Estrutura Mecânica</span><span>Geometria Modular de Encaixe Rápido</span></li>
+                <li><span>Filosofia do Projeto</span><span>Documentação Técnica e Telemetria Abertas</span></li>
+                <li><span>Adaptação Territorial</span><span>Customizável conforme Microclima e Topografia</span></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+
+        <!-- Painel 2: Ficha Técnica Detalhada (Pronta para receber os dados finais do usuário) -->
+        <div class="tech-tab-panel" data-tech-panel="especificacoes-prototipo">
+          <div class="bento-card bento-card--col-12 bento-card--engineering">
+            <div class="bento-card__meta">
+              <span class="badge badge--opensource">ESPECIFICAÇÕES DO PROTÓTIPO (SLOT TÉCNICO)</span>
+              <span>REV // AGUARDANDO DADOS FINAIS</span>
+            </div>
+            <h3 class="bento-card__title">Parâmetros Construtivos e Operacionais do T.U.L.I.P.A.</h3>
+            <p class="bento-card__desc">
+              Espaço estruturado para inserção imediata das dimensões exatas, vazão volumétrica ($m^3/h$), perda de carga, consumo energético, materiais do chassi e sensores embarcados do protótipo.
+            </p>
+            <ul class="spec-list">
+              <li><span>Vazão Nominal / Fluxo de Ar</span><span>[A definir nas especificações finais do protótipo]</span></li>
+              <li><span>Estágios de Filtragem Mecânica</span><span>[A definir nas especificações finais do protótipo]</span></li>
+              <li><span>Alimentação &amp; Eficiência Energética</span><span>[A definir nas especificações finais do protótipo]</span></li>
+              <li><span>Sensores de Qualidade do Ar</span><span>[A definir nas especificações finais do protótipo]</span></li>
+              <li><span>Dimensões &amp; Fixação Urbana</span><span>[A definir nas especificações finais do protótipo]</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bloco Dedicado à Telemetria IoT Aberta (Implementação Posterior conforme alinhado) -->
+        <div class="telemetry-architecture-box">
+          <div>
+            <div class="telemetry-status-pill">
+              <span>TELEMETRIA IoT ABERTA // INTEGRAÇÃO PREVISTA PARA FASE POSTERIOR</span>
+            </div>
+            <h3>Arquitetura de Dados Ambientais em Tempo Real</h3>
+            <p class="section-subtitle" style="font-size: 0.98rem; margin-top: 8px;">
+              O módulo de visualização de telemetria em tempo real será integrado diretamente nesta seção em uma atualização futura do site, conectando os nós sensores do <strong>T.U.L.I.P.A.</strong> para consulta pública de qualidade do ar, saturação dos filtros e indicadores de impacto ambiental e de saúde.
+            </p>
+          </div>
+          <div class="telemetry-slot-preview">
+            <strong>ESTRUTURA RESERVADA PARA ENDPOINT IoT:</strong>
+            <code>
+              GET /api/v1/tulipa/nodes/congonhas-01<br/>
+              status: "READY_FOR_FUTURE_INTEGRATION"<br/>
+              metrics: ["PM2.5", "PM10", "TEMP", "HUMIDITY", "FILTER_LIFE"]
+            </code>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SEÇÃO 3: SOBRE NÓS & TRAJETÓRIA
+         ====================================================================== -->
+    <section class="section" id="sobre-nos">
+      <div class="container">
+        <div class="section-header">
+          <span class="cad-marker">02 // IDENTIDADE, ORIGEM &amp; GOVERNANÇA</span>
+          <h2 class="section-title">Sobre Nós &amp; Trajetória</h2>
+          <!-- [PLACEHOLDER: Substituir pelo texto institucional definitivo da GEARS.] -->
+          <p class="section-subtitle">
+            Nascida em <strong>Congonhas (MG)</strong>, cidade histórica e coração de uma das maiores províncias mineradoras do mundo, a <strong>GEARS.</strong> une rigor de engenharia, governança sólida e compromisso com o código aberto.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Coluna Esquerda: Origem e Propósito -->
+          <div>
+            <div class="origin-highlight">
+              <span class="origin-coords">SEDE &amp; LABORATÓRIO VIVO // CONGONHAS — MINAS GERAIS</span>
+              <h3 style="font-size: 1.5rem; margin-bottom: 13px;">Inovação Ambiental onde ela é mais urgente</h3>
+              <p style="color: var(--text-secondary); margin-bottom: 16px;">
+                Viver a realidade de uma cidade mineradora nos permitiu compreender de perto o desafio da qualidade do ar urbano. Em vez de soluções fechadas e inacessíveis, escolhemos criar tecnologia transparente, auditável e projetada para conviver com a infraestrutura real das cidades brasileiras.
+              </p>
+              <p style="color: var(--text-secondary);">
+                Nosso foco é transformar pesquisa e engenharia aplicada em impacto mensurável para o <strong>Meio Ambiente</strong> e para a <strong>Saúde Pública</strong>.
+              </p>
+            </div>
+
+            <!-- Card explicando o conceito geométrico Fibonacci do Logotipo -->
+            <div class="fibonacci-brand-card">
+              <img src="assets/logo-gears.svg" alt="Símbolo GEARS. em proporção Fibonacci" style="width: 170px; height: auto;" />
+              <div>
+                <h4 style="margin-bottom: 6px;">Geometria de Precisão Fibonacci</h4>
+                <p style="font-size: 0.88rem; color: var(--text-secondary);">
+                  Nossa identidade visual reflete nosso método de engenharia: uma engrenagem limpa estruturada sob a sequência de Fibonacci, com o ponto final rigorosamente alinhado à base do símbolo.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coluna Direita: Liderança, Governança Familiar/Societária e Open Source -->
+          <div class="pillars-stack">
+            <article class="pillar-item">
+              <h4>01. Liderança Técnica &amp; Engenharia Aplicada</h4>
+              <p>
+                Desenvolvimento orientado por princípios físicos, prototipagem iterativa, mecânica de fluidos e instrumentação eletrônica para ambientes urbanos severos.
+              </p>
+            </article>
+
+            <article class="pillar-item">
+              <h4>02. Governança Familiar / Societária Transparente</h4>
+              <p>
+                Estrutura societária pautada pela visão de longo prazo, ética empresarial, responsabilidade patrimonial e compromisso genuíno com o desenvolvimento socioambiental de Congonhas e região.
+              </p>
+            </article>
+
+            <article class="pillar-item">
+              <h4>03. Filosofia Open Source (Hardware &amp; Dados Abertos)</h4>
+              <p>
+                Acreditamos que tecnologias essenciais para o ar limpo e a saúde coletiva devem ser transparentes. Compartilhamos arquitetura, documentação e padrões para acelerar a adoção em múltiplas cidades.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SEÇÃO 4: PARCERIAS & INVESTIMENTO (B2B / B2G / EDITAIS / APOIADORES)
+         ====================================================================== -->
+    <section class="section section--navy" id="parcerias">
+      <div class="container">
+        <div class="section-header">
+          <span class="cad-marker" style="color: #38BDF8;">03 // ECOSSISTEMA, IMPLANTAÇÃO &amp; CAPITAL</span>
+          <h2 class="section-title">Parcerias &amp; Investimento</h2>
+          <p class="section-subtitle" style="color: var(--text-on-dark-muted);">
+            Construímos pontes diretas entre indústria, poder público, agências de fomento e investidores para escalar o <strong>T.U.L.I.P.A.</strong> em municípios mineradores e polos industriais.
+          </p>
+        </div>
+
+        <div class="partners-grid">
+          <!-- Frente 1: Mineradoras & Indústria (B2B) -->
+          <article class="partner-card">
+            <div>
+              <div class="partner-card__tag">B2B // INDÚSTRIA &amp; ESG</div>
+              <h3>Mineradoras &amp; Operadores</h3>
+              <p>
+                Implantação de cinturões de purificação e monitoramento transparente em comunidades anfitriãs, fortalecendo metas ESG, licença social para operar e mitigação ativa de particulados.
+              </p>
+            </div>
+          </article>
+
+          <!-- Frente 2: Municípios & Setor Público (B2G) -->
+          <article class="partner-card">
+            <div>
+              <div class="partner-card__tag">B2G // CIDADES INTELIGENTES</div>
+              <h3>Prefeituras &amp; Municípios</h3>
+              <p>
+                Projetos-piloto de infraestrutura urbana, integração com secretarias de Meio Ambiente e Saúde, e geração de indicadores públicos para políticas de qualidade do ar.
+              </p>
+            </div>
+          </article>
+
+          <!-- Frente 3: Editais de Inovação & Pesquisa -->
+          <article class="partner-card">
+            <div>
+              <div class="partner-card__tag">P&amp;D // FOMENTO &amp; ACADEMIA</div>
+              <h3>Editais de Inovação</h3>
+              <p>
+                Cooperação técnica com universidades, centros de pesquisa, fundações de amparo e programas de subvenção econômica voltados para Deep Tech, Clima e Hardware Aberto.
+              </p>
+            </div>
+          </article>
+
+          <!-- Frente 4: Investidores & Apoiadores -->
+          <article class="partner-card">
+            <div>
+              <div class="partner-card__tag">CAPITAL // IMPACTO</div>
+              <h3>Investidores &amp; Apoiadores</h3>
+              <p>
+                Apoio financeiro para escala produtiva do T.U.L.I.P.A., expansão da malha de sensores e consolidação da GEARS. como referência nacional em tecnologia ambiental aberta.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Barra de Canais Diretos de Contato (E-mail, WhatsApp, LinkedIn, GitHub) -->
+        <!-- [PLACEHOLDER: Atualizar os atributos href abaixo com os links/contatos definitivos da GEARS.] -->
+        <div class="contact-channels-box">
+          <div class="contact-channels-info">
+            <h3>Inicie uma Conversa Técnica ou Institucional</h3>
+            <p>Fale diretamente com a liderança da GEARS. em Congonhas (MG) ou acesse nosso repositório oficial.</p>
+          </div>
+
+          <div class="contact-buttons-grid">
+            <a href="mailto:contato@gears.eng.br?subject=Parceria%20/%20Investimento%20-%20GEARS.%20%26%20Projeto%20T.U.L.I.P.A." class="channel-btn channel-btn--primary">
+              <span>E-MAIL DIRETO</span>
+            </a>
+            <a href="https://wa.me/5531000000000" target="_blank" rel="noopener noreferrer" class="channel-btn">
+              <span>WHATSAPP</span>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="channel-btn">
+              <span>LINKEDIN</span>
+            </a>
+            <a href="https://github.com/gearsbr/gearsbr" target="_blank" rel="noopener noreferrer" class="channel-btn">
+              <span>GITHUB (OPEN SOURCE)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       RODAPÉ / FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <img src="assets/logo-gears.svg" alt="GEARS." style="height: 34px; width: auto;" />
+          <p>
+            <strong>GEARS.</strong> — Engenharia e Tecnologia Ambiental.<br />
+            Desenvolvendo hardware aberto de alta precisão para a qualidade do ar e saúde urbana a partir de Congonhas, Minas Gerais.
+          </p>
+        </div>
+
+        <div class="footer-links-group">
+          <div class="footer-col">
+            <h5>Navegação</h5>
+            <ul>
+              <li><a href="#visao-geral">Visão Geral</a></li>
+              <li><a href="#solucao-tulipa">Projeto T.U.L.I.P.A.</a></li>
+              <li><a href="#sobre-nos">Sobre Nós &amp; Trajetória</a></li>
+              <li><a href="#parcerias">Parcerias &amp; Investimento</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Eixos de Impacto</h5>
+            <ul>
+              <li><span style="color: var(--impact-emerald); font-weight: 600;">■ Meio Ambiente (Esmeralda)</span></li>
+              <li><span style="color: var(--impact-mahogany); font-weight: 600;">■ Saúde Pública (Rich Mahogany)</span></li>
+              <li><span style="color: var(--gears-petrol); font-weight: 600;">■ Engenharia Aberta (Azul-Petróleo)</span></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Canais &amp; Código</h5>
+            <ul>
+              <li><a href="https://github.com/gearsbr/gearsbr" target="_blank" rel="noopener noreferrer">Repositório GitHub</a></li>
+              <li><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn Institucional</a></li>
+              <li><a href="mailto:contato@gears.eng.br">contato@gears.eng.br</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 GEARS. Engenharia e Tecnologia Ambiental — Congonhas (MG).</span>
+        <span>FILOSOFIA OPEN SOURCE // PRONTO PARA GITHUB PAGES</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1092 @@
+/* ==========================================================================
+   GEARS. — Open Source Environmental Engineering (Congonhas, MG)
+   Design System: Precision Engineering, Pure White High-Contrast, Fibonacci Grid
+   Inspired by: Tesla, Bambu Lab, Apple
+   ========================================================================== */
+
+:root {
+  /* Core Backgrounds (Strict Pure White & Cool Technical Surfaces) */
+  --bg-pure-white: #FFFFFF;
+  --bg-surface-tech: #F4F7F9;
+  --bg-surface-elevated: #FAFCFD;
+  --bg-navy-deep: #071324;
+
+  /* Primary Brand Colors — GEARS. (Navy & Petrol) */
+  --gears-navy: #0A192F;
+  --gears-navy-light: #132A4A;
+  --gears-petrol: #0F3A4D;
+  --gears-petrol-accent: #165B75;
+
+  /* Secondary Impact Categories */
+  /* Environment -> Emerald */
+  --impact-emerald: #047857;
+  --impact-emerald-bright: #10B981;
+  --impact-emerald-surface: #ECFDF5;
+  --impact-emerald-border: #A7F3D0;
+
+  /* Health -> Rich Mahogany (Dark Reddish Mahogany) */
+  --impact-mahogany: #5C1620;
+  --impact-mahogany-deep: #420D15;
+  --impact-mahogany-bright: #8B2232;
+  --impact-mahogany-surface: #FDF2F4;
+  --impact-mahogany-border: #F5C2C9;
+
+  /* Typography & Neutral Contrast */
+  --text-primary: #0A192F;
+  --text-secondary: #334155;
+  --text-muted: #64748B;
+  --text-on-dark: #F8FAFC;
+  --text-on-dark-muted: #94A3B8;
+
+  /* Structural CAD / Engineering Lines */
+  --border-grid: #E2E8F0;
+  --border-grid-strong: #CBD5E1;
+  --border-petrol: rgba(15, 58, 77, 0.25);
+
+  /* Typography Families */
+  --font-sans: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Fibonacci Spacing Scale (3, 5, 8, 13, 21, 34, 55, 89, 144px) */
+  --fib-3: 3px;
+  --fib-5: 5px;
+  --fib-8: 8px;
+  --fib-13: 13px;
+  --fib-21: 21px;
+  --fib-34: 34px;
+  --fib-55: 55px;
+  --fib-89: 89px;
+  --fib-144: 144px;
+
+  /* Layout & Transitions */
+  --container-max: 1320px;
+  --header-height: 76px;
+  --radius-sharp: 2px;
+  --radius-tech: 6px;
+  --transition-fast: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 320ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   Reset & Base Setup
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+  font-size: 16px;
+  background-color: var(--bg-pure-white);
+  color: var(--text-primary);
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-pure-white);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  /* Subtle technical engineering grid overlay on pure white */
+  background-image: 
+    linear-gradient(to right, rgba(226, 232, 240, 0.35) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(226, 232, 240, 0.35) 1px, transparent 1px);
+  background-size: 55px 55px; /* Fibonacci 55px grid */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  color: var(--gears-navy);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ==========================================================================
+   Utility & Structural Classes
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--fib-34);
+}
+
+.section {
+  position: relative;
+  padding: var(--fib-89) 0;
+  border-bottom: 1px solid var(--border-grid);
+  background-color: var(--bg-pure-white);
+}
+
+.section--surface {
+  background-color: var(--bg-surface-tech);
+}
+
+.section--navy {
+  background-color: var(--gears-navy);
+  color: var(--text-on-dark);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section--navy h2,
+.section--navy h3,
+.section--navy h4 {
+  color: var(--bg-pure-white);
+}
+
+/* CAD Crosshair Markers at Section Intersections */
+.cad-marker {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gears-petrol);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--fib-8);
+  margin-bottom: var(--fib-13);
+  font-weight: 600;
+}
+
+.cad-marker::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--gears-petrol);
+}
+
+/* Category Impact Badges (Emerald for Environment, Rich Mahogany for Health) */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 13px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sharp);
+}
+
+.badge--environment {
+  background-color: var(--impact-emerald-surface);
+  color: var(--impact-emerald);
+  border: 1px solid var(--impact-emerald-border);
+}
+
+.badge--environment .badge__dot {
+  width: 7px;
+  height: 7px;
+  background-color: var(--impact-emerald);
+  border-radius: 50%;
+}
+
+.badge--health {
+  background-color: var(--impact-mahogany-surface);
+  color: var(--impact-mahogany);
+  border: 1px solid var(--impact-mahogany-border);
+}
+
+.badge--health .badge__dot {
+  width: 7px;
+  height: 7px;
+  background-color: var(--impact-mahogany);
+  border-radius: 50%;
+}
+
+.badge--opensource {
+  background-color: var(--bg-surface-tech);
+  color: var(--gears-petrol);
+  border: 1px solid var(--border-grid-strong);
+}
+
+/* Section Headers */
+.section-header {
+  max-width: 780px;
+  margin-bottom: var(--fib-55);
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.5vw, 2.85rem);
+  margin-bottom: var(--fib-21);
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 26px;
+  font-family: var(--font-sans);
+  font-size: 0.925rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: var(--radius-sharp);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.btn--primary {
+  background-color: var(--gears-navy);
+  color: var(--bg-pure-white);
+  border-color: var(--gears-navy);
+}
+
+.btn--primary:hover {
+  background-color: var(--gears-petrol);
+  border-color: var(--gears-petrol);
+  transform: translateY(-1px);
+}
+
+.btn--outline {
+  background-color: var(--bg-pure-white);
+  color: var(--gears-navy);
+  border-color: var(--gears-navy);
+}
+
+.btn--outline:hover {
+  background-color: var(--bg-surface-tech);
+  border-color: var(--gears-petrol);
+  color: var(--gears-petrol);
+  transform: translateY(-1px);
+}
+
+.btn--emerald {
+  background-color: var(--impact-emerald);
+  color: var(--bg-pure-white);
+}
+
+.btn--emerald:hover {
+  background-color: #065F46;
+}
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: var(--header-height);
+  background-color: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-grid);
+}
+
+.header-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--fib-21);
+}
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  height: 42px;
+}
+
+.brand-logo svg {
+  height: 38px;
+  width: auto;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--fib-34);
+}
+
+.nav-link {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  position: relative;
+  padding: 6px 0;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--gears-petrol);
+  transition: var(--transition-fast);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--gears-navy);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--fib-13);
+}
+
+.github-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--gears-navy);
+  background-color: var(--bg-surface-tech);
+  border: 1px solid var(--border-grid-strong);
+  border-radius: var(--radius-sharp);
+}
+
+.github-pill:hover {
+  border-color: var(--gears-petrol);
+  color: var(--gears-petrol);
+}
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--border-grid-strong);
+  padding: 8px 10px;
+  cursor: pointer;
+  color: var(--gears-navy);
+}
+
+/* ==========================================================================
+   1. Hero Section
+   ========================================================================== */
+.hero {
+  padding: var(--fib-55) 0 var(--fib-89);
+  background-color: var(--bg-pure-white);
+  border-bottom: 1px solid var(--border-grid);
+  position: relative;
+}
+
+.hero-telemetry-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--fib-13);
+  padding-bottom: var(--fib-21);
+  margin-bottom: var(--fib-34);
+  border-bottom: 1px solid var(--border-grid);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.hero-telemetry-bar span strong {
+  color: var(--gears-petrol);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--fib-55);
+  align-items: center;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--fib-8);
+  margin-bottom: var(--fib-21);
+}
+
+.hero-title {
+  font-size: clamp(2.4rem, 4.5vw, 3.85rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: var(--gears-navy);
+  margin-bottom: var(--fib-21);
+}
+
+.hero-title .highlight-petrol {
+  color: var(--gears-petrol);
+}
+
+.hero-title .highlight-emerald {
+  color: var(--impact-emerald);
+}
+
+.hero-title .highlight-mahogany {
+  color: var(--impact-mahogany);
+}
+
+.hero-lead {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  max-width: 620px;
+  margin-bottom: var(--fib-34);
+  line-height: 1.7;
+}
+
+.hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--fib-13);
+  margin-bottom: var(--fib-34);
+}
+
+/* Dual Impact Strip inside Hero */
+.hero-impact-strip {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--fib-21);
+  padding-top: var(--fib-21);
+  border-top: 1px solid var(--border-grid);
+}
+
+.impact-mini-card {
+  padding: var(--fib-13) var(--fib-21);
+  border-left: 3px solid var(--gears-petrol);
+  background-color: var(--bg-surface-tech);
+}
+
+.impact-mini-card--emerald {
+  border-left-color: var(--impact-emerald);
+  background-color: var(--impact-emerald-surface);
+}
+
+.impact-mini-card--mahogany {
+  border-left-color: var(--impact-mahogany);
+  background-color: var(--impact-mahogany-surface);
+}
+
+.impact-mini-card__label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.impact-mini-card--emerald .impact-mini-card__label {
+  color: var(--impact-emerald);
+}
+
+.impact-mini-card--mahogany .impact-mini-card__label {
+  color: var(--impact-mahogany);
+}
+
+.impact-mini-card__text {
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* Hero Right Column: T.U.L.I.P.A. CAD Blueprint / Render Placeholder Frame */
+.hero-visual-frame {
+  background-color: var(--bg-pure-white);
+  border: 1px solid var(--border-grid-strong);
+  position: relative;
+  padding: var(--fib-21);
+  box-shadow: 0 20px 50px rgba(10, 25, 47, 0.05);
+}
+
+.frame-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--fib-13);
+  margin-bottom: var(--fib-13);
+  border-bottom: 1px solid var(--border-grid);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--gears-petrol);
+}
+
+.blueprint-canvas {
+  background-color: var(--bg-surface-tech);
+  border: 1px dashed var(--border-grid-strong);
+  padding: var(--fib-21);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 410px;
+  position: relative;
+}
+
+.blueprint-svg {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+}
+
+.asset-placeholder-notice {
+  margin-top: var(--fib-13);
+  padding: 8px 13px;
+  background-color: var(--bg-pure-white);
+  border: 1px solid var(--border-grid-strong);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--gears-petrol);
+  text-align: center;
+  width: 100%;
+}
+
+/* ==========================================================================
+   2. A Solução — Projeto T.U.L.I.P.A.
+   ========================================================================== */
+.tulipa-acronym-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--fib-21);
+  padding: var(--fib-21) var(--fib-34);
+  background-color: var(--gears-navy);
+  color: var(--bg-pure-white);
+  margin-bottom: var(--fib-55);
+  border-left: 5px solid var(--gears-petrol-accent);
+}
+
+.tulipa-acronym-bar__title {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--bg-pure-white);
+}
+
+.tulipa-acronym-bar__desc {
+  font-size: 0.92rem;
+  color: var(--text-on-dark-muted);
+}
+
+/* Interactive Engineering Tabs */
+.tech-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: var(--fib-34);
+  border-bottom: 1px solid var(--border-grid-strong);
+  padding-bottom: var(--fib-13);
+}
+
+.tech-tab-btn {
+  padding: 10px 21px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: var(--bg-pure-white);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-grid-strong);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.tech-tab-btn:hover {
+  border-color: var(--gears-petrol);
+  color: var(--gears-navy);
+}
+
+.tech-tab-btn.active {
+  background-color: var(--gears-navy);
+  color: var(--bg-pure-white);
+  border-color: var(--gears-navy);
+}
+
+.tech-tab-panel {
+  display: none;
+}
+
+.tech-tab-panel.active {
+  display: block;
+}
+
+/* Bento Grid for T.U.L.I.P.A. Pillars */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--fib-21);
+}
+
+.bento-card {
+  background-color: var(--bg-pure-white);
+  border: 1px solid var(--border-grid-strong);
+  padding: var(--fib-34);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: var(--transition-fast);
+}
+
+.bento-card:hover {
+  border-color: var(--gears-petrol);
+  box-shadow: 0 12px 32px rgba(10, 25, 47, 0.06);
+}
+
+.bento-card--col-6 {
+  grid-column: span 6;
+}
+
+.bento-card--col-4 {
+  grid-column: span 4;
+}
+
+.bento-card--col-8 {
+  grid-column: span 8;
+}
+
+.bento-card--col-12 {
+  grid-column: span 12;
+}
+
+/* Category-Specific Accent Borders */
+.bento-card--environment {
+  border-top: 4px solid var(--impact-emerald);
+}
+
+.bento-card--health {
+  border-top: 4px solid var(--impact-mahogany);
+}
+
+.bento-card--engineering {
+  border-top: 4px solid var(--gears-petrol);
+}
+
+.bento-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--fib-21);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.bento-card__title {
+  font-size: 1.45rem;
+  margin-bottom: var(--fib-13);
+}
+
+.bento-card__desc {
+  color: var(--text-secondary);
+  font-size: 0.98rem;
+  margin-bottom: var(--fib-21);
+}
+
+.spec-list {
+  border-top: 1px solid var(--border-grid);
+  padding-top: var(--fib-13);
+  display: grid;
+  gap: 8px;
+}
+
+.spec-list li {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  padding: 4px 0;
+  border-bottom: 1px dashed var(--border-grid);
+}
+
+.spec-list li span:first-child {
+  color: var(--text-muted);
+}
+
+.spec-list li span:last-child {
+  font-weight: 600;
+  color: var(--gears-navy);
+}
+
+.spec-list--emerald li span:last-child {
+  color: var(--impact-emerald);
+}
+
+.spec-list--mahogany li span:last-child {
+  color: var(--impact-mahogany);
+}
+
+/* Deferred IoT Telemetry Architecture Placeholder Block */
+.telemetry-architecture-box {
+  margin-top: var(--fib-34);
+  background-color: var(--bg-pure-white);
+  border: 1px solid var(--border-grid-strong);
+  border-left: 4px solid var(--gears-petrol);
+  padding: var(--fib-34);
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--fib-34);
+  align-items: center;
+}
+
+.telemetry-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  background-color: var(--bg-surface-tech);
+  border: 1px solid var(--border-grid-strong);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--gears-petrol);
+  margin-bottom: var(--fib-13);
+}
+
+.telemetry-slot-preview {
+  background-color: var(--bg-surface-tech);
+  border: 1px dashed var(--border-grid-strong);
+  padding: var(--fib-21);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.telemetry-slot-preview code {
+  display: block;
+  color: var(--gears-navy);
+  margin-top: 8px;
+  padding: 10px;
+  background-color: var(--bg-pure-white);
+  border: 1px solid var(--border-grid);
+}
+
+/* ==========================================================================
+   3. Sobre Nós & Trajetória (Congonhas, MG & Governança)
+   ========================================================================== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--fib-55);
+  align-items: start;
+}
+
+.origin-highlight {
+  background-color: var(--bg-surface-tech);
+  border: 1px solid var(--border-grid-strong);
+  padding: var(--fib-34);
+  margin-bottom: var(--fib-21);
+}
+
+.origin-coords {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--gears-petrol);
+  margin-bottom: var(--fib-8);
+  display: block;
+}
+
+.pillars-stack {
+  display: grid;
+  gap: var(--fib-21);
+}
+
+.pillar-item {
+  padding: var(--fib-21);
+  border: 1px solid var(--border-grid-strong);
+  background-color: var(--bg-pure-white);
+  border-left: 4px solid var(--gears-navy);
+}
+
+.pillar-item:nth-child(2) {
+  border-left-color: var(--gears-petrol);
+}
+
+.pillar-item:nth-child(3) {
+  border-left-color: var(--impact-emerald);
+}
+
+.pillar-item h4 {
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+}
+
+.pillar-item p {
+  font-size: 0.94rem;
+  color: var(--text-secondary);
+}
+
+/* Fibonacci Logo Geometry Showcase Card */
+.fibonacci-brand-card {
+  margin-top: var(--fib-34);
+  padding: var(--fib-34);
+  background-color: var(--bg-surface-tech);
+  border: 1px solid var(--border-grid-strong);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--fib-34);
+  align-items: center;
+}
+
+/* ==========================================================================
+   4. Parcerias & Investimento (B2B / B2G / Editais / Investidores)
+   ========================================================================== */
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--fib-21);
+  margin-bottom: var(--fib-55);
+}
+
+.partner-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: var(--fib-34) var(--fib-21);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition-fast);
+}
+
+.partner-card:hover {
+  border-color: var(--impact-emerald-bright);
+  background-color: rgba(255, 255, 255, 0.06);
+  transform: translateY(-2px);
+}
+
+.partner-card__tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #38BDF8;
+  margin-bottom: var(--fib-13);
+}
+
+.partner-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--fib-13);
+  color: var(--bg-pure-white);
+}
+
+.partner-card p {
+  font-size: 0.92rem;
+  color: var(--text-on-dark-muted);
+  line-height: 1.65;
+}
+
+/* Direct Channels Bar (Email, WhatsApp, LinkedIn, GitHub) */
+.contact-channels-box {
+  background-color: var(--bg-pure-white);
+  color: var(--text-primary);
+  padding: var(--fib-34);
+  border: 1px solid var(--border-grid-strong);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--fib-21);
+}
+
+.contact-channels-info h3 {
+  color: var(--gears-navy);
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+}
+
+.contact-channels-info p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.contact-buttons-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--fib-13);
+}
+
+.channel-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  border: 1px solid var(--gears-navy);
+  background-color: var(--bg-pure-white);
+  color: var(--gears-navy);
+  transition: var(--transition-fast);
+}
+
+.channel-btn:hover {
+  background-color: var(--gears-navy);
+  color: var(--bg-pure-white);
+}
+
+.channel-btn--primary {
+  background-color: var(--gears-petrol);
+  border-color: var(--gears-petrol);
+  color: var(--bg-pure-white);
+}
+
+.channel-btn--primary:hover {
+  background-color: var(--gears-navy);
+  border-color: var(--gears-navy);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+  background-color: var(--bg-pure-white);
+  border-top: 1px solid var(--border-grid);
+  padding: var(--fib-55) 0 var(--fib-34);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--fib-34);
+  padding-bottom: var(--fib-34);
+  border-bottom: 1px solid var(--border-grid);
+}
+
+.footer-brand-col {
+  max-width: 380px;
+}
+
+.footer-brand-col p {
+  margin-top: var(--fib-13);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.footer-links-group {
+  display: flex;
+  gap: var(--fib-55);
+  flex-wrap: wrap;
+}
+
+.footer-col h5 {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gears-navy);
+  margin-bottom: var(--fib-13);
+}
+
+.footer-col ul {
+  display: grid;
+  gap: 8px;
+}
+
+.footer-col a:hover {
+  color: var(--gears-petrol);
+}
+
+.footer-bottom {
+  padding-top: var(--fib-21);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--fib-13);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .hero-grid,
+  .about-grid,
+  .telemetry-architecture-box {
+    grid-template-columns: 1fr;
+  }
+
+  .bento-card--col-6,
+  .bento-card--col-4,
+  .bento-card--col-8 {
+    grid-column: span 12;
+  }
+
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--fib-21);
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background-color: var(--bg-pure-white);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--fib-21);
+    gap: var(--fib-13);
+    border-bottom: 1px solid var(--border-grid-strong);
+    box-shadow: 0 12px 24px rgba(10, 25, 47, 0.08);
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .mobile-menu-toggle {
+    display: inline-flex;
+  }
+
+  .hero-impact-strip,
+  .partners-grid,
+  .fibonacci-brand-card {
+    grid-template-columns: 1fr;
+  }
+}
