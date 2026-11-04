@@ -3,84 +3,100 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GEARS. | Engenharia e Tecnologia Ambiental Open Source — Projeto T.U.L.I.P.A.</title>
-  <meta name="description" content="Startup de engenharia e tecnologia ambiental de Congonhas (MG). Criadora do T.U.L.I.P.A., sistema modular de purificação de ar urbano com filtragem mecânica e telemetria IoT aberta." />
+  <title>GEARS. | Apple Open Source &amp; Engenharia de Precisão — T.U.L.I.P.A.™ &amp; FEARS.™</title>
+  <meta name="description" content="GEARS. Corporation: Engenharia de precisão com modularidade controlada de alto padrão (modelo Bambu Lab aberto). Criadora do T.U.L.I.P.A.™ e da divisão de alto desempenho FEARS.™ em Congonhas (MG)." />
 
   <!-- Google Fonts: Space Grotesk (Headings), Inter (Body), JetBrains Mono (Engineering/Specs) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
 
-  <link rel="icon" type="image/svg+xml" href="assets/logo-gears.svg" />
+  <!-- Canonical 1:1 Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
+  <!-- Skip-to-content Link (a11y) -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- Header Scroll Progress Bar -->
+  <div class="scroll-progress-bar" id="scroll-progress-bar" aria-hidden="true"></div>
+
   <!-- ========================================================================
        HEADER / NAVEGAÇÃO
        ======================================================================== -->
-  <header class="site-header">
+  <header class="site-header" role="banner">
     <div class="container header-inner">
-      <!-- [PLACEHOLDER: Substituir por SVG/Imagem oficial quando enviado, caso deseje alterar o traçado Fibonacci] -->
-      <a href="#visao-geral" class="brand-logo" aria-label="GEARS. Página Inicial">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212 56" fill="none" role="img" aria-label="Logotipo GEARS. com engrenagem Fibonacci e ponto alinhado na base">
-          <g transform="translate(26, 28)">
-            <circle r="21" stroke="#0F3A4D" stroke-width="0.75" stroke-dasharray="2 2" opacity="0.35"/>
-            <circle r="13" stroke="#0F3A4D" stroke-width="0.75" opacity="0.25"/>
-            <path d="M -3.5 -21 L 3.5 -21 L 4.8 -16.5 L -4.8 -16.5 Z M -3.5 21 L 3.5 21 L 4.8 16.5 L -4.8 16.5 Z M -21 -3.5 L -21 3.5 L -16.5 4.8 L -16.5 -4.8 Z M 21 -3.5 L 21 3.5 L 16.5 4.8 L 16.5 -4.8 Z" fill="#0A192F"/>
-            <g transform="rotate(45)">
-              <path d="M -3.5 -21 L 3.5 -21 L 4.8 -16.5 L -4.8 -16.5 Z M -3.5 21 L 3.5 21 L 4.8 16.5 L -4.8 16.5 Z M -21 -3.5 L -21 3.5 L -16.5 4.8 L -16.5 -4.8 Z M 21 -3.5 L 21 3.5 L 16.5 4.8 L 16.5 -4.8 Z" fill="#0A192F"/>
-            </g>
-            <circle r="17.5" fill="#0A192F"/>
-            <circle r="13" fill="#FFFFFF"/>
-            <circle r="8" fill="#0F3A4D"/>
-            <circle r="3" fill="#FFFFFF"/>
-            <line x1="-13" y1="0" x2="-8" y2="0" stroke="#0A192F" stroke-width="1.5"/>
-            <line x1="8" y1="0" x2="13" y2="0" stroke="#0A192F" stroke-width="1.5"/>
-            <line x1="0" y1="-13" x2="0" y2="-8" stroke="#0A192F" stroke-width="1.5"/>
-            <line x1="0" y1="8" x2="0" y2="13" stroke="#0A192F" stroke-width="1.5"/>
-          </g>
-          <text x="58" y="49" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="38" letter-spacing="2.5" fill="#0A192F">GEARS</text>
-          <!-- Ponto final alinhado exatamente à base inferior da engrenagem (Y=49) -->
+      <a href="#visao-geral" class="brand-logo navbar-brand" aria-label="GEARS. Página Inicial">
+        <!-- Canonical 8-tooth gear with transparent bore and baseline Y=49 -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212 56" fill="none" role="img" aria-label="GEARS. Logotipo Oficial — Engenharia de Precisão">
+          <path d="M 22.72 13.77 L 23.44 7.16 L 28.56 7.16 L 29.28 13.77 A 14.6 14.6 0 0 1 33.74 15.62 L 38.93 11.45 L 42.55 15.07 L 38.38 20.26 A 14.6 14.6 0 0 1 40.23 24.72 L 46.84 25.44 L 46.84 30.56 L 40.23 31.28 A 14.6 14.6 0 0 1 38.38 35.74 L 42.55 40.93 L 38.93 44.55 L 33.74 40.38 A 14.6 14.6 0 0 1 29.28 42.23 L 28.56 48.84 L 23.44 48.84 L 22.72 42.23 A 14.6 14.6 0 0 1 18.26 40.38 L 13.07 44.55 L 9.45 40.93 L 13.62 35.74 A 14.6 14.6 0 0 1 11.77 31.28 L 5.16 30.56 L 5.16 25.44 L 11.77 24.72 A 14.6 14.6 0 0 1 13.62 20.26 L 9.45 15.07 L 13.07 11.45 L 18.26 15.62 A 14.6 14.6 0 0 1 22.72 13.77 Z M 26.00 21.50 A 6.50 6.50 0 1 0 26.00 34.50 A 6.50 6.50 0 1 0 26.00 21.50 Z" fill="#0A192F" fill-rule="evenodd"/>
+          <text x="58" y="49" font-family="'Space Grotesk', 'Inter', -apple-system, sans-serif" font-weight="700" font-size="38" letter-spacing="2.5" fill="#0A192F">GEARS</text>
           <rect x="193" y="42" width="7" height="7" fill="#0F3A4D"/>
         </svg>
       </a>
 
-      <nav class="nav-menu" id="nav-menu" aria-label="Navegação Principal">
+      <nav class="nav-menu nav-links" id="nav-menu" role="navigation" aria-label="Navegação Principal">
         <a href="#visao-geral" class="nav-link active">Visão Geral</a>
-        <a href="#solucao-tulipa" class="nav-link">Projeto T.U.L.I.P.A.</a>
-        <a href="#sobre-nos" class="nav-link">Sobre Nós &amp; Trajetória</a>
-        <a href="#parcerias" class="nav-link">Parcerias &amp; Investimento</a>
+        <a href="#filosofia-modular" class="nav-link">Filosofia</a>
+        <a href="#solucao-tulipa" class="nav-link">T.U.L.I.P.A.™</a>
+        <a href="#visualizador-modular" class="nav-link">Módulos</a>
+        <a href="#calculadora-impacto" class="nav-link">Calculadora</a>
+        <a href="#divisao-fears" class="nav-link">FEARS.™</a>
+        <a href="#apoie-inovacao" class="nav-link">Apoie com PIX</a>
+        <a href="#faq-tecnico" class="nav-link">FAQ</a>
+        <a href="https://github.com/gearsbr/gearsbr" target="_blank" rel="noopener noreferrer" class="nav-link nav-link--github">GitHub (Open Source) ↗</a>
       </nav>
 
       <div class="header-actions">
+        <button type="button" class="btn-apoie-nav" data-open-modal="pix-modal" aria-label="Abrir modal de doação PIX">
+          <span>PIX // APOIAR</span>
+        </button>
         <a href="https://github.com/gearsbr/gearsbr" target="_blank" rel="noopener noreferrer" class="github-pill" title="Repositório Open Source no GitHub">
-          <span>OPEN SOURCE // GITHUB</span>
+          <span>GITHUB</span>
         </a>
-        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-label="Abrir menu de navegação">
+        <button class="mobile-menu-toggle mobile-nav-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-label="Alternar menu de navegação">
           MENU
         </button>
       </div>
     </div>
   </header>
 
-  <main>
+  <main id="main-content" role="main">
     <!-- ======================================================================
-         SEÇÃO 1: HERO / VISÃO GERAL
+         SEÇÃO 1: HERO / VISÃO GERAL COM TELEMETRIA SIMULADA DINÂMICA
          ====================================================================== -->
     <section class="hero" id="visao-geral">
       <div class="container">
-        <div class="hero-telemetry-bar">
-          <span>ORIGEM: <strong>CONGONHAS, MG — BRASIL (20°29'59"S 43°51'28"W)</strong></span>
-          <span>ACRÔNIMO: <strong>GLOBAL ENGINEERING &amp; ADVANCED ROBOTIC SYSTEMS</strong></span>
-          <span>PROJETO PRINCIPAL: <strong>T.U.L.I.P.A.™ (PULMÃO URBANO BIOMIMÉTICO)</strong></span>
+        <!-- Live Dynamic Telemetry Simulator Bar -->
+        <div class="telemetry-live-bar" id="telemetry-bar" role="region" aria-label="Telemetria Dinâmica do Sistema">
+          <div class="telemetry-item">
+            <span class="pulse-led" aria-hidden="true"></span>
+            <span>NÓ: <strong>CONGONHAS-CENTRO #01</strong> (ONLINE)</span>
+          </div>
+          <div class="telemetry-item">
+            <span>UPTIME: <strong id="telemetry-uptime" class="tabular-nums">99.8%</strong></span>
+          </div>
+          <div class="telemetry-item">
+            <span>PM2.5: <strong id="telemetry-pm25-val" class="tabular-nums">18.4 µg/m³</strong></span>
+          </div>
+          <div class="telemetry-item">
+            <span>PM10: <strong id="telemetry-pm10-val" class="tabular-nums">34.2 µg/m³</strong></span>
+          </div>
+          <div class="telemetry-item">
+            <span>FILTRO HEPA: <strong id="telemetry-filter-gauge" class="tabular-nums">84.3% VIDA</strong></span>
+          </div>
+          <div class="telemetry-item">
+            <span>LOCALIDADE: <strong>CONGONHAS (MG) 20°29'59"S 43°51'28"W</strong></span>
+          </div>
         </div>
 
         <div class="hero-grid">
-          <!-- Coluna Esquerda: Headline e Chamadas -->
+          <!-- Left Column: Headline and Badges -->
           <div class="hero-content">
             <div class="hero-badges">
-              <span class="badge badge--opensource">ENGENHARIA ABERTA</span>
+              <span class="badge badge--opensource">APPLE OPEN SOURCE</span>
               <span class="badge badge--environment">
                 <span class="badge__dot"></span>
                 MEIO AMBIENTE &amp; MONITORAMENTO PLUVIAL
@@ -96,84 +112,85 @@
             </h1>
 
             <p class="hero-lead">
-              Fundada em Congonhas (MG) por <strong>Gabriel Rossi Pereira</strong> com governança institucional de <strong>Paula Rossi de Oliveira</strong>, a <strong>GEARS.</strong> (<em>Global Engineering &amp; Advanced Robotic Systems</em>) desenvolve o <strong>T.U.L.I.P.A.™</strong> (<em>Treatment Unit &amp; Localized Isolation of Polluted Air</em>): um pulmão urbano biomimético acoplado a postes públicos que une filtragem ativa multinível, análise físico-química da chuva, telemetria IoT aberta e educação tecnológica para jovens da rede pública.
+              Nascida em <strong>Congonhas (MG)</strong> sob liderança técnica de <strong>Gabriel Rossi Pereira</strong> e governança de <strong>Paula Rossi de Oliveira</strong>, a <strong>GEARS.</strong> (<em>Global Engineering &amp; Advanced Robotic Systems</em>) redefine o hardware sustentável: unimos a tolerância construtiva de um ecossistema controlado de alto padrão com a soberania e a transparência do Open Source real.
             </p>
 
             <div class="hero-cta-group">
-              <a href="#solucao-tulipa" class="btn btn--primary">
-                Explorar Arquitetura T.U.L.I.P.A.
+              <a href="#visualizador-modular" class="btn btn--primary">
+                Explorar Arquitetura Modular
               </a>
-              <a href="#parcerias" class="btn btn--outline">
-                Parcerias B2B / B2G &amp; Investimento
+              <button type="button" class="btn btn--emerald" data-open-modal="pix-modal">
+                Apoie o Projeto via PIX
+              </button>
+              <a href="#divisao-fears" class="btn btn--outline">
+                Divisão FEARS.™ Performance
               </a>
             </div>
 
-            <!-- Faixa Dupla de Impacto (Esmeralda para Meio Ambiente | Rich Mahogany para Saúde) -->
+            <!-- Dual Impact Strip -->
             <div class="hero-impact-strip">
               <div class="impact-mini-card impact-mini-card--emerald">
                 <span class="impact-mini-card__label">Eixo Ambiental // Esmeralda</span>
                 <p class="impact-mini-card__text">
-                  Descontaminação atmosférica ativa e regeneração da qualidade do ar no entorno urbano e operacional.
+                  Descontaminação atmosférica ativa, retenção física de hematita/sílica e análise química de água da chuva.
                 </p>
               </div>
               <div class="impact-mini-card impact-mini-card--mahogany">
                 <span class="impact-mini-card__label">Eixo Saúde // Rich Mahogany</span>
                 <p class="impact-mini-card__text">
-                  Barreira mecânica contra material particulado em suspensão (PM2.5 e PM10) crítico em regiões mineradoras.
+                  Captura de aerossóis na cota de respiração de pedestres (~1m do solo), protegendo pulmões contra PM2.5 e PM10.
                 </p>
               </div>
             </div>
           </div>
 
-          <!-- Coluna Direita: Quadro Técnico CAD / Slot para Render Oficial do T.U.L.I.P.A. -->
+          <!-- Right Column: CAD Technical Frame -->
           <div class="hero-visual-frame">
             <div class="frame-top-bar">
-              <span>CAD // MOD-TULIPA-REV.01</span>
-              <span>FIBONACCI GRID: 1:1.618</span>
+              <span>CAD // TULIPA-REV.02 // MODULAR SCHEMATIC</span>
+              <span>GRID: FIBONACCI 1:1.618</span>
             </div>
 
-            <!-- [PLACEHOLDER: Substituir o SVG abaixo pelo Render 3D / Foto do protótipo T.U.L.I.P.A. quando enviado] -->
             <div class="blueprint-canvas">
-              <svg class="blueprint-svg" viewBox="0 0 320 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Esquema técnico vetorial provisório do purificador urbano modular T.U.L.I.P.A.">
-                <!-- Linhas de cota e eixos técnicos -->
-                <line x1="160" y1="15" x2="160" y2="345" stroke="#0F3A4D" stroke-width="1" stroke-dasharray="4 4" opacity="0.45"/>
-                <line x1="30" y1="180" x2="290" y2="180" stroke="#0F3A4D" stroke-width="1" stroke-dasharray="4 4" opacity="0.45"/>
+              <svg class="blueprint-svg" viewBox="0 0 320 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Esquema técnico do purificador urbano modular T.U.L.I.P.A.">
+                <!-- Measurement lines and center crosshairs -->
+                <line x1="160" y1="15" x2="160" y2="345" stroke="#0F3A4D" stroke-width="1" stroke-dasharray="4 4" opacity="0.35"/>
+                <line x1="30" y1="180" x2="290" y2="180" stroke="#0F3A4D" stroke-width="1" stroke-dasharray="4 4" opacity="0.35"/>
 
-                <!-- Coifa / Difusor Superior Aerodinâmico (Formato Tulipa) -->
-                <path d="M90 65 L230 65 L205 120 L115 120 Z" fill="#FFFFFF" stroke="#0A192F" stroke-width="2"/>
-                <path d="M105 65 L122 120 M215 65 L198 120" stroke="#047857" stroke-width="1.5"/>
+                <!-- Petal / Rain collector coif -->
+                <path d="M85 65 L235 65 L210 120 L110 120 Z" fill="#F8F9FA" stroke="#0A192F" stroke-width="2"/>
+                <path d="M100 65 L118 120 M220 65 L202 120" stroke="#047857" stroke-width="1.5"/>
 
-                <!-- Módulo Central de Filtragem Mecânica Multiestágio -->
-                <rect x="110" y="128" width="100" height="110" fill="#FFFFFF" stroke="#0A192F" stroke-width="2"/>
-                <!-- Estágios de Filtro Internos (Esmeralda & Mahogany indicando retenção) -->
-                <line x1="118" y1="152" x2="202" y2="152" stroke="#5C1620" stroke-width="3"/>
-                <line x1="118" y1="178" x2="202" y2="178" stroke="#047857" stroke-width="3"/>
-                <line x1="118" y1="204" x2="202" y2="204" stroke="#0F3A4D" stroke-width="2" stroke-dasharray="5 3"/>
+                <!-- Multi-stage filter cassette -->
+                <rect x="105" y="128" width="110" height="110" rx="4" fill="#FFFFFF" stroke="#0A192F" stroke-width="2"/>
+                <line x1="115" y1="150" x2="205" y2="150" stroke="#5C1620" stroke-width="3" stroke-linecap="round"/>
+                <line x1="115" y1="175" x2="205" y2="175" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
+                <line x1="115" y1="200" x2="205" y2="200" stroke="#0F3A4D" stroke-width="2" stroke-dasharray="4 3"/>
 
-                <!-- Módulo Inferior de Telemetria IoT e Acoplamento Urbano -->
-                <rect x="120" y="246" width="80" height="64" fill="#0A192F"/>
-                <circle cx="160" cy="278" r="14" stroke="#10B981" stroke-width="1.8"/>
-                <circle cx="160" cy="278" r="4" fill="#10B981"/>
+                <!-- Telemetry & Urban pole bracket base -->
+                <rect x="115" y="246" width="90" height="66" rx="4" fill="#0A192F"/>
+                <circle cx="160" cy="279" r="14" stroke="#10B981" stroke-width="1.8"/>
+                <circle cx="160" cy="279" r="4" fill="#10B981"/>
 
-                <!-- Setas de Fluxo de Ar -->
-                <path d="M72 150 L102 150" stroke="#5C1620" stroke-width="1.5"/>
-                <polygon points="102,147 108,150 102,153" fill="#5C1620"/>
-                <path d="M248 150 L218 150" stroke="#5C1620" stroke-width="1.5"/>
-                <polygon points="218,147 212,150 218,153" fill="#5C1620"/>
+                <!-- Airflow streamlines -->
+                <path d="M68 150 L98 150" stroke="#5C1620" stroke-width="2"/>
+                <polygon points="98,146 106,150 98,154" fill="#5C1620"/>
+                <path d="M252 150 L222 150" stroke="#5C1620" stroke-width="2"/>
+                <polygon points="222,146 214,150 222,154" fill="#5C1620"/>
 
-                <path d="M140 55 L140 30" stroke="#047857" stroke-width="1.5"/>
-                <polygon points="137,32 140,24 143,32" fill="#047857"/>
-                <path d="M180 55 L180 30" stroke="#047857" stroke-width="1.5"/>
-                <polygon points="177,32 180,24 183,32" fill="#047857"/>
+                <path d="M140 55 L140 28" stroke="#047857" stroke-width="2"/>
+                <polygon points="136,30 140,20 144,30" fill="#047857"/>
+                <path d="M180 55 L180 28" stroke="#047857" stroke-width="2"/>
+                <polygon points="176,30 180,20 184,30" fill="#047857"/>
 
-                <!-- Rótulos Técnicos -->
-                <text x="22" y="142" font-family="'JetBrains Mono', monospace" font-size="8" fill="#5C1620">ENTRADA PM2.5/PM10</text>
-                <text x="112" y="18" font-family="'JetBrains Mono', monospace" font-size="8" fill="#047857">AR PURIFICADO</text>
-                <text x="126" y="328" font-family="'JetBrains Mono', monospace" font-size="8" fill="#0A192F">ACOPLAMENTO URBANO</text>
+                <!-- Technical Labels -->
+                <text x="16" y="142" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" fill="#5C1620">ENTRADA PM (1M)</text>
+                <text x="112" y="16" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" fill="#047857">AR LIMPO EXAUSTÃO</text>
+                <text x="114" y="328" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" fill="#0A192F">ACOPLAMENTO POSTE (3M)</text>
               </svg>
 
               <div class="asset-placeholder-notice">
-                [ESPAÇO RESERVADO PARA RENDER OFICIAL DO PROTÓTIPO T.U.L.I.P.A.]
+                CAD SCHEMATIC // T.U.L.I.P.A.™ PRECISION HARDWARE
               </div>
             </div>
           </div>
@@ -182,31 +199,243 @@
     </section>
 
     <!-- ======================================================================
-         SEÇÃO 2: A SOLUÇÃO (PROJETO T.U.L.I.P.A.)
+         SEÇÃO 2: A FILOSOFIA "APPLE OPEN SOURCE" & MODULARIDADE CONTROLADA
          ====================================================================== -->
-    <section class="section section--surface" id="solucao-tulipa">
+    <section class="section section--surface" id="filosofia-modular">
       <div class="container">
         <div class="section-header">
-          <span class="cad-marker">01 // ARQUITETURA DE HARDWARE &amp; IMPACTO</span>
-          <h2 class="section-title">A Solução: Projeto T.U.L.I.P.A.™</h2>
+          <span class="cad-marker">01 // FILOSOFIA DE ENGENHARIA &amp; ARQUITETURA</span>
+          <h2 class="section-title">A Filosofia "Apple Open Source com Modularidade de Precisão"</h2>
           <p class="section-subtitle">
-            Sigla para <strong><em>Treatment Unit &amp; Localized Isolation of Polluted Air</em></strong>, o <strong>T.U.L.I.P.A.™</strong> é um sistema biomimético de purificação atmosférica e microclima fixado em postes de iluminação pública a <strong>3 metros de altura</strong>, com captação ativa na <strong>cota de respiração humana (~1m do solo)</strong>.
+            Rejeitamos a falsa dicotomia do mercado industrial: não aceitamos a repressão dos jardins murados corporativos nem toleramos a cultura da gambiarra caótica. Somos o terceiro caminho.
           </p>
         </div>
 
-        <!-- Barra de Identificação Técnica do T.U.L.I.P.A. -->
-        <div class="tulipa-acronym-bar">
-          <div>
-            <div class="tulipa-acronym-bar__title">T.U.L.I.P.A.™ — TREATMENT UNIT &amp; LOCALIZED ISOLATION OF POLLUTED AIR</div>
-            <p class="tulipa-acronym-bar__desc">
-              Módulo de Material Particulado (MMP) + Análise Pluvial Físico-Química + Telemetria IoT Dupla (Entrada/Saída)
+        <div class="philosophy-grid">
+          <!-- Card Creality -->
+          <article class="philosophy-card philosophy-card--creality">
+            <div class="philosophy-card__header">
+              <span class="philosophy-card__tag">O MODELO CREALITY</span>
+              <h3 class="philosophy-card__title">Open Source Caótico ("Gambiarra")</h3>
+            </div>
+            <p class="philosophy-card__body">
+              Acesso irrestrito a esquemas, mas sem tolerância dimensional. Componentes frágeis, impressões desalinhadas, fios desencapados e necessidade constante de remendos caseiros. Quando vidas e pulmões dependem do equipamento, a improvisação é inaceitável.
             </p>
-          </div>
-          <span class="badge badge--opensource">BE-CLEAN SYSTEM // HOT-SWAP</span>
+            <div class="philosophy-card__footer">
+              <span style="color: #DC2626;">STATUS: REJEITADO PELA GEARS.</span>
+            </div>
+          </article>
+
+          <!-- Card Bambu Lab -->
+          <article class="philosophy-card philosophy-card--bambulab">
+            <div class="philosophy-card__header">
+              <span class="philosophy-card__tag">O MODELO BAMBU LAB</span>
+              <h3 class="philosophy-card__title">Jardim Murado &amp; Fechamento</h3>
+            </div>
+            <p class="philosophy-card__body">
+              Engenharia espetacular e tolerâncias impecáveis, porém completamente proprietário. Criptografia em chips, peças trancadas que criminalizam reparos independentes e dados confinados a servidores corporativos distantes do cidadão.
+            </p>
+            <div class="philosophy-card__footer">
+              <span style="color: #2563EB;">STATUS: MODELO INCOMPLETO</span>
+            </div>
+          </article>
+
+          <!-- Card GEARS. -->
+          <article class="philosophy-card philosophy-card--gears">
+            <div class="philosophy-card__header">
+              <span class="philosophy-card__tag">O MODELO GEARS.</span>
+              <h3 class="philosophy-card__title">Bambu Lab com Alma Open Source</h3>
+            </div>
+            <p class="philosophy-card__body">
+              <strong>Modularidade Oficial Controlada</strong>: todas as expansões, engates rápidos e cartuchos são fabricados com padrão de engenharia supremo e autoritário. Firmwares, esquemáticos e telemetria de ar são 100% livres e auditáveis por qualquer cidadão.
+            </p>
+            <div class="philosophy-card__footer">
+              <span style="color: var(--gears-petrol);">STATUS: CONSTITUIÇÃO GEARS.</span>
+            </div>
+          </article>
         </div>
 
-        <!-- Abas Interativas para Organização Técnica -->
-        <div class="tech-tabs" role="tablist" aria-label="Especificações do Projeto T.U.L.I.P.A.">
+        <!-- 7 Precision Hardware Modules Breakdown -->
+        <div style="margin-top: var(--fib-55);">
+          <div class="section-header">
+            <span class="cad-marker">7 MÓDULOS DE HARDWARE AUTORITÁRIOS</span>
+            <h3 style="font-size: 1.85rem; margin-bottom: 8px;">Arquitetura Desmontável de Precisão</h3>
+            <p style="color: var(--text-secondary); font-size: 1rem;">
+              Conheça os 7 blocos estruturais intercambiáveis do purificador urbano <strong>T.U.L.I.P.A.™</strong>:
+            </p>
+          </div>
+
+          <div class="hardware-modules-grid">
+            <!-- Módulo 1 -->
+            <article class="hardware-module-card">
+              <div>
+                <div class="module-card-header">
+                  <span class="module-card-num">MOD // 01</span>
+                  <span class="badge badge--opensource">ÓPTICA &amp; IA</span>
+                </div>
+                <h4 class="module-card-title">Módulo de Câmera &amp; Inspeção</h4>
+                <p class="module-card-desc">Inspeção contínua da saturação do filtro e turbidez de aerossóis na coifa.</p>
+              </div>
+              <div class="module-card-specs">
+                <strong>GEARS. PADRÃO:</strong>
+                <span>CMOS 1080p, lente hidrofóbica selada IP67 e iluminação estroboscópica de calibração.</span>
+              </div>
+              <div class="module-card-fears-upgrade">
+                <strong>FEARS.™ TUNING UPGRADE:</strong>
+                <span>Sensor de Espectro Duplo (RGB + NIR) com Edge-AI para hematita vs. sílica e corpo em Alumínio 6061-T6.</span>
+              </div>
+            </article>
+
+            <!-- Módulo 2 -->
+            <article class="hardware-module-card">
+              <div>
+                <div class="module-card-header">
+                  <span class="module-card-num">MOD // 02</span>
+                  <span class="badge badge--environment"><span class="badge__dot"></span>BIOMIMÉTICA</span>
+                </div>
+                <h4 class="module-card-title">Módulo de Tampas (Interna &amp; Externa)</h4>
+                <p class="module-card-desc">Dupla blindagem UV, isolamento aerodinâmico e canalização biomimética.</p>
+              </div>
+              <div class="module-card-specs">
+                <strong>GEARS. PADRÃO:</strong>
+                <span>Coifa em pétalas de PETG UV50+, guarnições de silicone grau alimentício anti-bypass.</span>
+              </div>
+              <div class="module-card-fears-upgrade">
+                <strong>FEARS.™ TUNING UPGRADE:</strong>
+                <span>Coifa em Fibra de Carbono Pre-Preg curada em autoclave com parafusos em Titânio Grau 5 (-35% arrasto).</span>
+              </div>
+            </article>
+
+            <!-- Módulo 3 -->
+            <article class="hardware-module-card">
+              <div>
+                <div class="module-card-header">
+                  <span class="module-card-num">MOD // 03</span>
+                  <span class="badge badge--health"><span class="badge__dot"></span>HEPA H13</span>
+                </div>
+                <h4 class="module-card-title">Cassete de Filtragem Multiestágio</h4>
+                <p class="module-card-desc">Retenção mecânica de PM10, PM2.5 ultrafino e gases ácidos via <em>Be-Clean Hot-Swap</em>.</p>
+              </div>
+              <div class="module-card-specs">
+                <strong>GEARS. PADRÃO:</strong>
+                <span>4 Estágios: Pré-filtro lavável &rarr; Manta poliéster &rarr; HEPA H13 (99.97%) &rarr; Carvão colmeia.</span>
+              </div>
+              <div class="module-card-fears-upgrade">
+                <strong>FEARS.™ TUNING UPGRADE:</strong>
+                <span>Mídia de Nanofibras eletrofiadas Hyper-Flow com íons de Cobre/Prata e perda de carga 50% menor.</span>
+              </div>
+            </article>
+
+            <!-- Módulo 4 -->
+            <article class="hardware-module-card">
+              <div>
+                <div class="module-card-header">
+                  <span class="module-card-num">MOD // 04</span>
+                  <span class="badge badge--opensource">ESP32-S3</span>
+                </div>
+                <h4 class="module-card-title">Placa-Mãe Industrial &amp; MCU</h4>
+                <p class="module-card-desc">Processamento em malha fechada (*Closed-Loop*), amostragem de dados e criptografia.</p>
+              </div>
+              <div class="module-card-specs">
+                <strong>GEARS. PADRÃO:</strong>
+                <span>PCB 4 camadas com verniz conformal anti-umidade, ESP32-S3 Dual-Core e criptochip ATECC608A.</span>
+              </div>
+              <div class="module-card-fears-upgrade">
+                <strong>FEARS.™ TUNING UPGRADE:</strong>
+                <span>Dual-MCU redundante (ARM Cortex-M4 + ESP32), barramento automotivo CAN-FD e caixa-preta 64MB Flash.</span>
+              </div>
+            </article>
+
+            <!-- Módulo 5 -->
+            <article class="hardware-module-card">
+              <div>
+                <div class="module-card-header">
+                  <span class="module-card-num">MOD // 05</span>
+                  <span class="badge badge--opensource">LiFePO4</span>
+                </div>
+                <h4 class="module-card-title">Módulo de Bateria &amp; BMS</h4>
+                <p class="module-card-desc">Operação contínua durante desligamento diurno da iluminação pública e contra surtos.</p>
+              </div>
+              <div class="module-card-specs">
+                <strong>GEARS. PADRÃO:</strong>
+                <span>Pack LiFePO4 12.8V 6Ah (76.8Wh), BMS com balanceamento ativo e proteção térmica (-10°C a +65°C).</span>
+              </div>
+              <div class="module-card-fears-upgrade">
+                <strong>FEARS.™ TUNING UPGRADE:</strong>
+                <span>Pack militar LiFePO4 18Ah (230Wh) com MPPT solar integrado para operação 100% off-grid 24/7.</span>
+              </div>
+            </article>
+
+            <!-- Módulo 6 -->
+            <article class="hardware-module-card">
+              <div>
+                <div class="module-card-header">
+                  <span class="module-card-num">MOD // 06</span>
+                  <span class="badge badge--opensource">IP68 / M12</span>
+                </div>
+                <h4 class="module-card-title">Entradas &amp; Barramento I/O</h4>
+                <p class="module-card-desc">Conexão rápida em campo, acoplamento no poste, diagnóstico de engenharia e flashing.</p>
+              </div>
+              <div class="module-card-specs">
+                <strong>GEARS. PADRÃO:</strong>
+                <span>Conectores industriais M12 baioneta IP68, porta USB-C magnética com proteção ESD &plusmn;15kV.</span>
+              </div>
+              <div class="module-card-fears-upgrade">
+                <strong>FEARS.™ TUNING UPGRADE:</strong>
+                <span>Conectores MIL-DTL-38999, barramento blindado e uplink direto satelital (Iridium/Swarm IoT).</span>
+              </div>
+            </article>
+
+            <!-- Módulo 7 -->
+            <article class="hardware-module-card">
+              <div>
+                <div class="module-card-header">
+                  <span class="module-card-num">MOD // 07</span>
+                  <span class="badge badge--environment"><span class="badge__dot"></span>PLUVIAL &amp; AR</span>
+                </div>
+                <h4 class="module-card-title">Módulo Pluvial &amp; Microclima</h4>
+                <p class="module-card-desc">Análise físico-química da chuva e auditoria de ar limpo na cota humana de 1 metro.</p>
+              </div>
+              <div class="module-card-specs">
+                <strong>GEARS. PADRÃO:</strong>
+                <span>Funil com eletrodo de pH, célula de condutividade TDS, turbidímetro e laser PM2.5/PM10 diferencial.</span>
+              </div>
+              <div class="module-card-fears-upgrade">
+                <strong>FEARS.™ TUNING UPGRADE:</strong>
+                <span>Espectrofotômetro óptico em linha, sensor de O2 dissolvido e anemômetro sônico ultrassônico.</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SEÇÃO 3: PROJETO T.U.L.I.P.A.™ (DETALHAMENTO CONSTRUTIVO)
+         ====================================================================== -->
+    <section class="section" id="solucao-tulipa">
+      <div class="container">
+        <div class="section-header">
+          <span class="cad-marker">02 // O PULMÃO URBANO BIOMIMÉTICO</span>
+          <h2 class="section-title">Projeto T.U.L.I.P.A.™</h2>
+          <p class="section-subtitle">
+            <em>Treatment Unit &amp; Localized Isolation of Polluted Air</em>: a primeira sentinela atmosférica instalada em postes públicos a 3m de altura com sucção direta a 1m do solo.
+          </p>
+        </div>
+
+        <!-- Acronym bar -->
+        <div class="tulipa-acronym-bar">
+          <div>
+            <div class="tulipa-acronym-bar__title">T.U.L.I.P.A.™ — ARQUITETURA CONGONHAS (MG)</div>
+            <p class="tulipa-acronym-bar__desc">
+              Filtragem Mecânica H13 + Análise Pluvial Físico-Química + Telemetria IoT Aberta
+            </p>
+          </div>
+          <span class="badge badge--opensource">BE-CLEAN // HOT-SWAP 45s</span>
+        </div>
+
+        <!-- Tech tabs -->
+        <div class="tech-tabs" role="tablist" aria-label="Especificações do T.U.L.I.P.A.">
           <button class="tech-tab-btn active" role="tab" aria-selected="true" data-tech-tab="visao-arquitetura">
             01. Pilares de Engenharia &amp; Impacto
           </button>
@@ -215,10 +444,10 @@
           </button>
         </div>
 
-        <!-- Painel 1: Bento Grid de Engenharia (Meio Ambiente em Esmeralda, Saúde em Rich Mahogany, Engenharia em Azul-Petróleo) -->
+        <!-- Panel 1: Bento Grid -->
         <div class="tech-tab-panel active" data-tech-panel="visao-arquitetura">
           <div class="bento-grid">
-            <!-- Card 1: Meio Ambiente (Esmeralda) -->
+            <!-- Card 1: Environment -->
             <article class="bento-card bento-card--col-6 bento-card--environment">
               <div>
                 <div class="bento-card__meta">
@@ -230,17 +459,17 @@
                 </div>
                 <h3 class="bento-card__title">Pétalas Biomiméticas &amp; Estação Pluvial</h3>
                 <p class="bento-card__desc">
-                  Sua estrutura em formato de tulipa ("U") abriga o sistema contra intempéries, direciona aerodinamicamente o ar limpo para baixo e capta a água da chuva pelo centro das pétalas para análise físico-química em tempo real antes da drenagem.
+                  A estrutura em formato de tulipa abriga o sistema contra intempéries, difunde o ar purificado para baixo a 45° e canaliza a água da chuva pelo centro das pétalas para análise em tempo real (pH, condutividade e turbidez) antes do descarte urbano.
                 </p>
               </div>
               <ul class="spec-list spec-list--emerald">
-                <li><span>Telemetria Pluvial</span><span>Sondas de pH, Turbidez e Condutividade/TDS</span></li>
-                <li><span>Microclima &amp; Gases</span><span>Sensores BME280 + Gases e CO2 (MQ / NDIR)</span></li>
-                <li><span>Manufatura Sustentável</span><span>Filamentos Técnicos PETG/ABS UV + Aço Inox</span></li>
+                <li><span>Telemetria Pluvial</span><span>Sondas de pH, Turbidez Óptica e Condutividade/TDS</span></li>
+                <li><span>Microclima &amp; Gases</span><span>Sensores BME280 + NDIR / MQ para Gases Tóxicos</span></li>
+                <li><span>Manufatura</span><span>PETG com Aditivação Anti-UV50+ e Aço Inox 316</span></li>
               </ul>
             </article>
 
-            <!-- Card 2: Saúde Pública (Rich Mahogany) -->
+            <!-- Card 2: Health -->
             <article class="bento-card bento-card--col-6 bento-card--health">
               <div>
                 <div class="bento-card__meta">
@@ -250,40 +479,40 @@
                   </span>
                   <span>MOD-HLT // 02</span>
                 </div>
-                <h3 class="bento-card__title">Módulo de Material Particulado (MMP) na Cota de Respiração</h3>
+                <h3 class="bento-card__title">Captação na Cota de Respiração Humana</h3>
                 <p class="bento-card__desc">
-                  Um duto flexível posicionado a ~1m do solo capta o ar exatamente na altura de respiração de pedestres, crianças e idosos nos corredores viários de Congonhas (Av. Júlia Kubitschek, Rua Bom Jesus, Praça JK e Basílica), barrando a poeira mineral pesada.
+                  Duto posicionado na altura crítica de 1 metro do solo suga o ar diretamente onde pedestres, crianças e idosos respiram na Av. Júlia Kubitschek e Rua Bom Jesus, interceptando partículas pesadas de hematita antes da entrada no trato brônquico.
                 </p>
               </div>
               <ul class="spec-list spec-list--mahogany">
-                <li><span>Estágio 1 (Pré-Filtragem)</span><span>Filtro de Pano Lavável (Fuligem e Poeira Densa)</span></li>
-                <li><span>Estágios 2 e 3 (MMP)</span><span>Manta de Carvão Ativado + Filtro HEPA Classe H13</span></li>
-                <li><span>Auditoria de Retenção</span><span>Sensores Laser PM1.0, PM2.5 e PM10 (Entrada vs. Saída)</span></li>
+                <li><span>Estágio 1 (Pré-Filtragem)</span><span>Pano Técnico Lavável (Fuligem e Poeira Mineral)</span></li>
+                <li><span>Estágios 2 e 3</span><span>Manta de Carvão Ativado + Filtro HEPA Classe H13 (99.97%)</span></li>
+                <li><span>Auditoria Diferencial</span><span>Sensores Laser de Entrada vs. Saída (Prova Real)</span></li>
               </ul>
             </article>
 
-            <!-- Card 3: Arquitetura Modular Open Source (Azul-Marinho / Petróleo) -->
+            <!-- Card 3: Engineering -->
             <article class="bento-card bento-card--col-12 bento-card--engineering">
               <div>
                 <div class="bento-card__meta">
-                  <span class="badge badge--opensource">CONSTITUIÇÃO GEARS. // ENGENHARIA &amp; EDUCAÇÃO MAKER</span>
+                  <span class="badge badge--opensource">CONSTITUIÇÃO GEARS. // EDUCAÇÃO MAKER IFMG</span>
                   <span>MOD-MEC // 03</span>
                 </div>
                 <h3 class="bento-card__title">Exaustão Closed-Loop, Be-Clean System e Protagonismo Estudantil</h3>
                 <p class="bento-card__desc">
-                  Projetado sob as normas da Constituição da <strong>GEARS.</strong> (durabilidade decenal, materiais imunes à oxidação, arquitetura modular <em>Hot-Swap</em> e <em>Be-Clean System</em>), o <strong>T.U.L.I.P.A.™</strong> integra estudantes da rede pública de Congonhas (evolução do programa <em>Mais Ciência na Escola / IFMG</em>) na impressão 3D, montagem eletrônica e calibração em bancada.
+                  Projetado sob a Constituição Técnica GEARS. (durabilidade decenal, materiais imunes à oxidação, troca rápida de filtros sem ferramentas em 45 segundos), o projeto capacita jovens de escolas públicas de Congonhas (evolução do programa <em>Mais Ciência na Escola / IFMG</em>) na impressão 3D, montagem eletrônica e calibração em bancada.
                 </p>
               </div>
               <ul class="spec-list">
-                <li><span>Câmara de Compressão</span><span>Blower Industrial Closed-Loop + Filtro de Atenuação Acústica</span></li>
-                <li><span>Alimentação Elétrica</span><span>Fonte Chaveada Blindada 12V/5V nos Postes (+ Módulo Solar previsto)</span></li>
-                <li><span>Conectividade em Malha</span><span>ESP32 Wi-Fi / LoRa comunicando com unidades T.U.L.I.P.A.™ irmãs</span></li>
+                <li><span>Câmara de Exaustão</span><span>Blower Industrial Closed-Loop com Atenuador Acústico (&lt; 42 dBA)</span></li>
+                <li><span>Alimentação Elétrica</span><span>Rede de Iluminação Pública 12V/5V (+ Módulo Bateria LiFePO4 de Reserva)</span></li>
+                <li><span>Rede Mesh LoRa</span><span>Comunicação P2P entre unidades T.U.L.I.P.A. com failover de telemetria</span></li>
               </ul>
             </article>
           </div>
         </div>
 
-        <!-- Painel 2: Ficha Técnica Detalhada Oficial -->
+        <!-- Panel 2: Prototype Data Sheet -->
         <div class="tech-tab-panel" data-tech-panel="especificacoes-prototipo">
           <div class="bento-card bento-card--col-12 bento-card--engineering">
             <div class="bento-card__meta">
@@ -292,105 +521,544 @@
             </div>
             <h3 class="bento-card__title">Parâmetros Construtivos e Operacionais do T.U.L.I.P.A.™</h3>
             <p class="bento-card__desc">
-              Especificações técnicas de engenharia conforme documentação oficial da <strong>GEARS. Industries</strong> e Plano de Trabalho de Implantação Urbana em Congonhas (MG):
+              Especificações técnicas de engenharia conforme documentação técnica da GEARS. Corporation e Plano de Implantação Urbana de Congonhas (MG):
             </p>
             <ul class="spec-list">
               <li><span>Designação Oficial</span><span>T.U.L.I.P.A.™ — Treatment Unit &amp; Localized Isolation of Polluted Air</span></li>
-              <li><span>Fixação e Cota de Captura</span><span>Fixado em postes públicos a 3,0m de altura | Tubo coletor a ~1,0m do solo</span></li>
-              <li><span>Tren de Filtragem (4 Estágios)</span><span>1. Pré-filtro de tecido lavável &rarr; 2. Carvão Ativado &rarr; 3. HEPA Classe H13 &rarr; 4. Filtro Acústico</span></li>
-              <li><span>Motorização e Controle</span><span>Ventoinha/Blower industrial Closed-Loop com monitoramento de corrente, temperatura e rotação</span></li>
-              <li><span>Estação Dupla de Qualidade do Ar</span><span>Leitura comparativa na Entrada e na Saída: Laser PM1.0, PM2.5, PM10, Gases (MQ/NDIR) e BME280</span></li>
-              <li><span>Estação Físico-Química Pluvial</span><span>Captação central nas pétalas com sensores de pH, Condutividade Elétrica (TDS) e Turbidez Óptica</span></li>
-              <li><span>Microcontrolador e Telemetria</span><span>Arquitetura Modular ESP32 (Wi-Fi / LoRa) com comunicação entre unidades próximas</span></li>
-              <li><span>Chassi e Materiais Nobres</span><span>Impressão 3D FDM/CoreXY em PETG/ABS resistente a UV + Fixadores em Aço Inoxidável</span></li>
-              <li><span>Alimentação e Eficiência</span><span>Rede de iluminação pública via Fonte Chaveada Blindada 12V/5V (Expansão para Painel Solar)</span></li>
-              <li><span>Locais Piloto em Congonhas</span><span>Av. Júlia Kubitschek, Rua Bom Jesus, Entorno da Praça JK e Bairro Matriz / Basílica</span></li>
+              <li><span>Cota de Fixação</span><span>Corpo principal a 3,0m de altura | Duto de captação a ~1,0m do solo</span></li>
+              <li><span>Trem de Filtragem (4 Estágios)</span><span>1. Pré-filtro lavável &rarr; 2. Carvão ativado &rarr; 3. HEPA H13 (99.97% @ 0.3µm) &rarr; 4. Atenuador acústico</span></li>
+              <li><span>Vazão Nominal de Ar</span><span>380 m³/h (Modo GEARS. Standard) | até 836 m³/h (Modo FEARS.™ High-Performance)</span></li>
+              <li><span>Consumo Energético</span><span>18W nominal por nó (eficiência classe A+, compatível com rede de iluminação 12V/5V)</span></li>
+              <li><span>Bateria &amp; Autonomia</span><span>Pack LiFePO4 76.8Wh com balanceamento ativo (operação contínua sem interrupção diurna)</span></li>
+              <li><span>Monitoramento Diferencial</span><span>Pares de sensores laser Plantower PMS7003 na entrada bruta e saída tratada</span></li>
+              <li><span>Estação Pluvial</span><span>Funil central com eletrodo de pH, célula de condutividade TDS e turbidímetro óptico</span></li>
+              <li><span>Microcontrolador &amp; Rede</span><span>ESP32-S3 Dual-Core 240MHz com Wi-Fi 802.11 b/g/n e rádio LoRa Mesh 915MHz</span></li>
+              <li><span>Corredores Piloto em Congonhas</span><span>Av. Júlia Kubitschek, Rua Bom Jesus, Praça JK e Basílica do Senhor Bom Jesus</span></li>
             </ul>
-          </div>
-        </div>
-
-        <!-- Bloco Dedicado à Telemetria IoT Aberta (Implementação Posterior conforme alinhado) -->
-        <div class="telemetry-architecture-box">
-          <div>
-            <div class="telemetry-status-pill">
-              <span>TELEMETRIA IoT ABERTA // INTEGRAÇÃO PREVISTA PARA FASE POSTERIOR</span>
-            </div>
-            <h3>Arquitetura de Dados Ambientais em Tempo Real</h3>
-            <p class="section-subtitle" style="font-size: 0.98rem; margin-top: 8px;">
-              O módulo de visualização de telemetria em tempo real será integrado diretamente nesta seção em uma atualização futura do site, conectando os nós sensores do <strong>T.U.L.I.P.A.</strong> para consulta pública de qualidade do ar, saturação dos filtros e indicadores de impacto ambiental e de saúde.
-            </p>
-          </div>
-          <div class="telemetry-slot-preview">
-            <strong>ESTRUTURA RESERVADA PARA ENDPOINT IoT:</strong>
-            <code>
-              GET /api/v1/tulipa/nodes/congonhas-01<br/>
-              status: "READY_FOR_FUTURE_INTEGRATION"<br/>
-              metrics: ["PM2.5", "PM10", "TEMP", "HUMIDITY", "FILTER_LIFE"]
-            </code>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ======================================================================
-         SEÇÃO 3: SOBRE NÓS & TRAJETÓRIA
+         SEÇÃO 4: WIDGET 1 — VISUALIZADOR MODULAR INTERATIVO (EXPLODED VIEW)
+         ====================================================================== -->
+    <section class="section section--surface" id="visualizador-modular">
+      <div class="container">
+        <div class="section-header">
+          <span class="cad-marker">03 // VISUALIZADOR MECÂNICO INTERATIVO</span>
+          <h2 class="section-title">Visualizador Modular Explodido</h2>
+          <p class="section-subtitle">
+            Alterne entre os modos montado e explodido, ative o pacote <strong>FEARS.™ High-Performance</strong> e inspecione cada subsistema de hardware com tolerância mecânica de precisão.
+          </p>
+        </div>
+
+        <div class="modular-visualizer" id="modular-visualizer">
+          <!-- Top Control Bar -->
+          <div class="visualizer-controls">
+            <div class="ecosystem-toggle" role="radiogroup" aria-label="Seletor de Ecossistema">
+              <button class="eco-btn active" data-eco="gears" role="radio" aria-checked="true">
+                <span class="eco-dot eco-dot--gears"></span> GEARS. Standard (Cívico)
+              </button>
+              <button class="eco-btn" data-eco="fears" role="radio" aria-checked="false">
+                <span class="eco-dot eco-dot--fears"></span> FEARS.™ High-Performance
+              </button>
+            </div>
+
+            <div class="view-mode-toggle">
+              <button class="btn-tool" id="btn-toggle-exploded" aria-pressed="false">
+                <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M4 4h4v4H4zm8 0h4v4h-4zm-8 8h4v4H4zm8 0h4v4h-4z" stroke="currentColor" stroke-width="1.5"/></svg>
+                <span>Vista Explodida</span>
+              </button>
+              <button class="btn-tool" id="fears-boost-toggle" aria-pressed="false">
+                <span>Boost FEARS.™</span>
+              </button>
+              <button class="btn-tool" id="btn-reset-view">
+                <span>Redefinir</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Visualizer Stage & Inspector Split -->
+          <div class="visualizer-body" id="visualizer-stage">
+            <div class="visualizer-canvas-frame">
+              <svg class="visualizer-svg" viewBox="0 0 400 480" id="visualizer-svg" role="img" aria-label="Diagrama dos módulos de precisão do T.U.L.I.P.A.">
+                <!-- Background CAD Grid -->
+                <defs>
+                  <pattern id="cad-grid-pattern" width="20" height="20" patternUnits="userSpaceOnUse">
+                    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(15, 58, 77, 0.08)" stroke-width="0.5"/>
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#cad-grid-pattern)"/>
+
+                <!-- Central Guide Line -->
+                <line x1="200" y1="20" x2="200" y2="460" stroke="#0F3A4D" stroke-dasharray="4 4" stroke-width="1" opacity="0.3"/>
+
+                <!-- Module 1: Petals & Coif -->
+                <g id="mod-group-petal" class="mod-group active" data-module="mod-petal">
+                  <path d="M 120 70 L 280 70 L 250 130 L 150 130 Z" fill="#F8FAFC" stroke="#0A192F" stroke-width="2.5"/>
+                  <path d="M 140 70 L 160 130 M 260 70 L 240 130" stroke="#047857" stroke-width="1.8"/>
+                  <circle cx="200" cy="100" r="14" fill="#047857" opacity="0.15"/>
+                  <circle cx="200" cy="100" r="6" fill="#047857"/>
+                  <text x="200" y="125" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#047857">MOD-TUL-01 // PÉTALAS</text>
+                </g>
+
+                <!-- Module 2: Intake Casing -->
+                <g id="mod-group-casing" class="mod-group" data-module="mod-casing">
+                  <rect x="130" y="140" width="140" height="50" rx="4" fill="#FFFFFF" stroke="#0F3A4D" stroke-width="2"/>
+                  <line x1="145" y1="165" x2="255" y2="165" stroke="#CBD5E1" stroke-width="1.5" stroke-dasharray="3 3"/>
+                  <text x="200" y="170" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" fill="#0F3A4D">MOD-TUL-02 // COIFA &amp; TAMPAS</text>
+                </g>
+
+                <!-- Module 3: 4-Stage Filter Cassette -->
+                <g id="mod-group-filter" class="mod-group" data-module="mod-filter">
+                  <rect x="135" y="200" width="130" height="80" rx="4" fill="#F1F5F9" stroke="#5C1620" stroke-width="2.5"/>
+                  <line x1="145" y1="218" x2="255" y2="218" stroke="#5C1620" stroke-width="3" stroke-linecap="round"/>
+                  <line x1="145" y1="238" x2="255" y2="238" stroke="#0F3A4D" stroke-width="2.5" stroke-dasharray="4 2"/>
+                  <line x1="145" y1="258" x2="255" y2="258" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
+                  <text x="200" y="275" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#5C1620">MOD-TUL-03 // FILTRAGEM H13</text>
+                </g>
+
+                <!-- Module 4: Motherboard & MCU -->
+                <g id="mod-group-motherboard" class="mod-group" data-module="mod-motherboard">
+                  <rect x="140" y="290" width="120" height="40" rx="3" fill="#0A192F" stroke="#10B981" stroke-width="1.5"/>
+                  <rect x="155" y="302" width="16" height="16" rx="2" fill="#10B981"/>
+                  <text x="200" y="315" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="700" fill="#FFFFFF">MOD-TUL-04 // ESP32-S3 MCU</text>
+                </g>
+
+                <!-- Module 5: Battery & BMS -->
+                <g id="mod-group-battery" class="mod-group" data-module="mod-battery">
+                  <rect x="145" y="340" width="110" height="36" rx="3" fill="#0F3A4D" stroke="#00D2BE" stroke-width="1.5"/>
+                  <text x="200" y="362" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="700" fill="#00D2BE">MOD-TUL-05 // LiFePO4 76.8Wh</text>
+                </g>
+
+                <!-- Module 6: IO Bus & Connectors -->
+                <g id="mod-group-io" class="mod-group" data-module="mod-io">
+                  <rect x="150" y="385" width="100" height="26" rx="2" fill="#334155" stroke="#CBD5E1" stroke-width="1"/>
+                  <circle cx="170" cy="398" r="4" fill="#00D2BE"/>
+                  <circle cx="200" cy="398" r="4" fill="#F59E0B"/>
+                  <circle cx="230" cy="398" r="4" fill="#10B981"/>
+                  <text x="200" y="407" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="700" fill="#CBD5E1">MOD-TUL-06 // I/O M12 IP68</text>
+                </g>
+
+                <!-- Module 7: Pluvial Chamber & Urban Pole Mount -->
+                <g id="mod-group-telemetry" class="mod-group" data-module="mod-telemetry">
+                  <rect x="155" y="420" width="90" height="34" rx="3" fill="#0A192F" stroke="#0F3A4D" stroke-width="2"/>
+                  <circle cx="200" cy="437" r="8" stroke="#10B981" stroke-width="1.5"/>
+                  <text x="200" y="449" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" font-weight="700" fill="#FFFFFF">MOD-TUL-07 // PLUVIAL</text>
+                </g>
+
+                <!-- FEARS.™ High-Performance Twin Turbo Booster (Hidden in GEARS mode) -->
+                <g id="mod-group-fears-turbo" class="mod-group fears-only" data-module="mod-fears-turbo">
+                  <rect x="290" y="190" width="80" height="100" rx="6" fill="#060D17" stroke="#00D2BE" stroke-width="2.5"/>
+                  <circle cx="330" cy="240" r="24" stroke="#00D2BE" stroke-width="2" stroke-dasharray="4 2"/>
+                  <circle cx="330" cy="240" r="10" fill="#00D2BE"/>
+                  <text x="330" y="278" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" font-weight="700" fill="#00D2BE">FEARS.™ TWIN TURBO</text>
+                </g>
+              </svg>
+            </div>
+
+            <!-- Inspector Panel -->
+            <aside class="visualizer-inspector" id="visualizer-inspector">
+              <div>
+                <div class="inspector-badge" id="inspector-code">MOD-TUL-01 // COLETOR BIOMIMÉTICO</div>
+                <h3 class="inspector-title" id="inspector-name">Pétalas Biomiméticas &amp; Estação Pluvial</h3>
+                <p class="inspector-cat" id="inspector-cat">Meio Ambiente &amp; Aerodinâmica Urbana</p>
+                
+                <table class="inspector-specs-table">
+                  <tbody id="inspector-specs">
+                    <tr><td>Cota de Fixação:</td><td>3,0 metros do solo</td></tr>
+                    <tr><td>Material Estrutural:</td><td>PETG Técnico com proteção anti-UV50+</td></tr>
+                    <tr><td>Função Primária:</td><td>Captação pluvial e difusão aerodinâmica do ar a 45°</td></tr>
+                    <tr><td>Troca / Manutenção:</td><td>Sistema Be-Clean Hot-Swap (sem ferramentas, 45s)</td></tr>
+                    <tr><td>Sensores Integrados:</td><td>Sondas de pH, Condutividade (TDS) e Turbidez Óptica</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Quick Module Selector Buttons -->
+              <div>
+                <label style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">
+                  Selecionar Componente:
+                </label>
+                <div class="module-selector-pills">
+                  <button type="button" class="module-btn active" data-module="mod-petal">Pétalas (01)</button>
+                  <button type="button" class="module-btn" data-module="mod-casing">Tampas (02)</button>
+                  <button type="button" class="module-btn" data-module="mod-filter">Filtro H13 (03)</button>
+                  <button type="button" class="module-btn" data-module="mod-motherboard">Placa ESP32 (04)</button>
+                  <button type="button" class="module-btn" data-module="mod-battery">Bateria BMS (05)</button>
+                  <button type="button" class="module-btn" data-module="mod-io">Barramento (06)</button>
+                  <button type="button" class="module-btn" data-module="mod-telemetry">Pluvial (07)</button>
+                  <button type="button" class="module-btn" data-module="mod-fears-turbo">Turbina FEARS.™</button>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SEÇÃO 5: WIDGET 2 — CALCULADORA DE IMPACTO URBANO DE PARTICULADOS
+         ====================================================================== -->
+    <section class="section" id="calculadora-impacto">
+      <div class="container">
+        <div class="section-header">
+          <span class="cad-marker">04 // SIMULAÇÃO EPIDEMIOLÓGICA &amp; AMBIENTAL</span>
+          <h2 class="section-title">Calculadora de Impacto de Particulados</h2>
+          <p class="section-subtitle">
+            Simule a massa de pó de minério (hematita e sílica) interceptada anualmente nos corredores de <strong>Congonhas (MG)</strong> e o volume de consultas respiratórias evitadas.
+          </p>
+        </div>
+
+        <div class="calculator-container">
+          <!-- Congonhas Presets Bar -->
+          <div class="calc-presets-bar">
+            <span>Corredores de Congonhas:</span>
+            <button type="button" class="preset-btn active" data-preset="julia-kubitschek">
+              Av. Júlia Kubitschek (Pico Viário)
+            </button>
+            <button type="button" class="preset-btn" data-preset="bom-jesus">
+              Rua Bom Jesus &amp; Centro Histórico
+            </button>
+            <button type="button" class="preset-btn" data-preset="cinturao-mina">
+              Cinturão de Amortecimento de Lavra
+            </button>
+          </div>
+
+          <div class="calc-grid">
+            <!-- Sliders Inputs -->
+            <div class="calc-inputs">
+              <!-- Slider 1: Nodes -->
+              <div class="calc-field">
+                <div class="calc-field-header">
+                  <label for="calc-range-flow">Postes com Unidades T.U.L.I.P.A.™:</label>
+                  <span class="calc-field-value tabular-nums" id="val-nodes">10 postes</span>
+                </div>
+                <input type="range" id="calc-range-flow" min="1" max="50" value="10" step="1" aria-label="Número de postes públicos equipados" />
+              </div>
+
+              <!-- Slider 2: PM Concentration -->
+              <div class="calc-field">
+                <div class="calc-field-header">
+                  <label for="calc-range-pm">Concentração Média PM2.5 / PM10:</label>
+                  <span class="calc-field-value tabular-nums" id="val-pm">45 µg/m³</span>
+                </div>
+                <input type="range" id="calc-range-pm" min="15" max="150" value="45" step="5" aria-label="Concentração de material particulado em microgramas por metro cúbico" />
+              </div>
+
+              <!-- Slider 3: Operating Hours -->
+              <div class="calc-field">
+                <div class="calc-field-header">
+                  <label for="calc-range-hours">Horas de Operação Diária:</label>
+                  <span class="calc-field-value tabular-nums" id="val-hours">24 horas (Contínuo)</span>
+                </div>
+                <input type="range" id="calc-range-hours" min="8" max="24" value="24" step="2" aria-label="Horas de operação diária dos ventiladores" />
+              </div>
+
+              <!-- FEARS Boost Toggle -->
+              <div class="calc-toggle-fears">
+                <input type="checkbox" id="fears-boost-calc-toggle" />
+                <label for="fears-boost-calc-toggle" style="font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; color: var(--gears-navy); cursor: pointer;">
+                  Ativar Motor FEARS.™ Twin-Turbine (+120% vazão de ar por nó)
+                </label>
+              </div>
+            </div>
+
+            <!-- KPI Results Output -->
+            <div class="calc-outputs">
+              <div class="calc-kpi-card calc-kpi-card--petrol">
+                <span class="calc-kpi-label">Volume Anual de Ar Descontaminado</span>
+                <div class="calc-kpi-value tabular-nums" id="calc-clean-air">33.288.000 m³</div>
+                <p class="calc-kpi-sub">Equivalente à respiração limpa de uma cidade média durante 1 ano.</p>
+              </div>
+
+              <div class="calc-kpi-card calc-kpi-card--emerald">
+                <span class="calc-kpi-label">Poeira Mineral Retida no Filtro H13</span>
+                <div class="calc-kpi-value tabular-nums" id="calc-mass-pm">149,7 kg/ano</div>
+                <p class="calc-kpi-sub">Minério de ferro (hematita/sílica) impedido de penetrar alvéolos pulmonares.</p>
+              </div>
+
+              <div class="calc-kpi-card calc-kpi-card--mahogany">
+                <span class="calc-kpi-label">Consultas Respiratórias Evitadas</span>
+                <div class="calc-kpi-value tabular-nums" id="calc-health-savings">~31 atendimentos</div>
+                <p class="calc-kpi-sub">Estimativa baseada em fatores de risco epidemiológico da OMS para Congonhas.</p>
+              </div>
+            </div>
+
+            <!-- Calculator Bottom Action Bar -->
+            <div class="calc-actions">
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">
+                FÓRMULA CANÔNICA: V = Nós &times; Q &times; T &bull; M = V &times; 365 &times; C_pm &times; &eta;
+              </span>
+              <button type="button" class="btn btn--outline" id="btn-export-calc">
+                <span>Copiar Relatório da Simulação</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SEÇÃO 6: DIVISÃO FEARS.™ HIGH-PERFORMANCE TUNING
+         ====================================================================== -->
+    <section class="section section--fears" id="divisao-fears">
+      <div class="container">
+        <div class="fears-header-brand">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 56" fill="none" role="img" aria-label="FEARS.™ High Performance Division">
+            <g transform="translate(26, 28)">
+              <path d="M -3.28 -14.23 L -2.56 -20.84 L 2.56 -20.84 L 3.28 -14.23 A 14.6 14.6 0 0 1 7.74 -12.38 L 12.93 -16.55 L 16.55 -12.93 L 12.38 -7.74 A 14.6 14.6 0 0 1 14.23 -3.28 L 20.84 -2.56 L 20.84 2.56 L 14.23 3.28 A 14.6 14.6 0 0 1 12.38 7.74 L 16.55 12.93 L 12.93 16.55 L 7.74 12.38 A 14.6 14.6 0 0 1 3.28 14.23 L 2.56 20.84 L -2.56 20.84 L -3.28 14.23 A 14.6 14.6 0 0 1 -7.74 12.38 L -12.93 16.55 L -16.55 12.93 L -12.38 7.74 A 14.6 14.6 0 0 1 -14.23 3.28 L -20.84 2.56 L -20.84 -2.56 L -14.23 -3.28 A 14.6 14.6 0 0 1 -12.38 -7.74 L -16.55 -12.93 L -12.93 -16.55 L -7.74 -12.38 A 14.6 14.6 0 0 1 -3.28 -14.23 Z M 0 -6.50 A 6.50 6.50 0 1 0 0 6.50 A 6.50 6.50 0 1 0 0 -6.50 Z" fill="#00D2BE" fill-rule="evenodd"/>
+              <circle r="3.8" fill="#FFFFFF"/>
+            </g>
+            <text x="58" y="44" font-family="'Space Grotesk', 'Inter', -apple-system, sans-serif" font-weight="700" font-size="34" letter-spacing="2.8" fill="#FFFFFF">FEARS</text>
+            <rect x="180" y="38" width="6" height="6" fill="#00D2BE"/>
+            <text x="189" y="24" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="11" fill="#00D2BE">TM</text>
+            <text x="59" y="53" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="7.5" letter-spacing="1.5" fill="#94A3B8">HIGH-PERFORMANCE TUNING // GEARS. CORP.</text>
+          </svg>
+        </div>
+
+        <div class="section-header">
+          <span class="cad-marker cad-marker--fears">05 // ULTRA-PERFORMANCE TUNING &amp; REGIMES SEVEROS</span>
+          <h2 class="section-title">A Divisão FEARS.™ — O Paralelo Mercedes-AMG &amp; Maybach</h2>
+          <p class="section-subtitle" style="color: var(--text-on-dark-muted);">
+            Se a GEARS. é o alicerce de infraestrutura urbana aberta e saúde ambiental, a <strong>FEARS.™</strong> é o braço de tuning de ultra-alta performance e comissionamento sob medida para frentes de lavra, plantas industriais severas e mineração subterrânea.
+          </p>
+        </div>
+
+        <div class="fears-grid">
+          <!-- FEARS Module 1 -->
+          <article class="fears-card">
+            <div>
+              <span class="fears-card__badge">AEROESPACIAL // CARBON FIBER</span>
+              <h3 class="fears-card__title">Coifa em Fibra de Carbono &amp; Titânio</h3>
+              <p class="fears-card__desc">
+                Substituição do polímero por compósito de fibra de carbono pré-impregnada curada em autoclave. Redução de 35% no arrasto fluidodinâmico e parafusos de fixação em Titânio Grau 5 com amortecimento harmônico de ressonância.
+              </p>
+            </div>
+            <div class="fears-card__specs">
+              <span>RESISTÊNCIA A IMPACTOS: &gt; 250J // PESO: -48%</span>
+            </div>
+          </article>
+
+          <!-- FEARS Module 2 -->
+          <article class="fears-card">
+            <div>
+              <span class="fears-card__badge">PROPULSÃO // TWIN TURBINE</span>
+              <h3 class="fears-card__title">Turbinas Hiperbáricas Balanceadas</h3>
+              <p class="fears-card__desc">
+                Dois blowers industriais de levitação magnética operando em contrapressão com mancais cerâmicos de nitreto de silício. Elevação da vazão para 836 m³/h em áreas de carregamento de minério de alta densidade particulada.
+              </p>
+            </div>
+            <div class="fears-card__specs">
+              <span>VAZÃO ELEVADA: +120% // MTBF: &gt; 80.000 HORAS</span>
+            </div>
+          </article>
+
+          <!-- FEARS Module 3 -->
+          <article class="fears-card">
+            <div>
+              <span class="fears-card__badge">DESCONTAMINAÇÃO // PLASMA</span>
+              <h3 class="fears-card__title">Câmara de Plasma Bipolar &amp; Íons</h3>
+              <p class="fears-card__desc">
+                Célula de ionização a plasma de alta voltagem acoplada a nanopartículas de Prata e Cobre. Neutraliza ativamente compostos orgânicos voláteis (VOCs), vapores ácidos industriais e patógenos biológicos com eficiência bactericida instantânea.
+              </p>
+            </div>
+            <div class="fears-card__specs">
+              <span>DENSIDADE IÔNICA: 200M ÍONS/CM³ // CATÁLISE PURA</span>
+            </div>
+          </article>
+        </div>
+
+        <div style="margin-top: var(--fib-34); text-align: center;">
+          <a href="#visualizador-modular" class="btn btn--fears">
+            Experimentar Módulos FEARS.™ no Visualizador 3D
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SEÇÃO 7: DOAÇÃO / APOIO FINANCEIRO INTERATIVO COM PIX
+         ====================================================================== -->
+    <section class="section section--surface" id="apoie-inovacao">
+      <div class="container">
+        <div class="section-header">
+          <span class="cad-marker">06 // APOIE A INOVAÇÃO ABERTA &amp; HARDWARE CÍVICO</span>
+          <h2 class="section-title">Apoie a Inovação Aberta. Financie Ar Limpo para Congonhas.</h2>
+          <p class="section-subtitle">
+            Sua doação direta financia insumos para manufatura de novos módulos T.U.L.I.P.A.™, bolsas de tecnologia para alunos da rede pública no IFMG e garante que a telemetria do ar permaneça 100% aberta para a sociedade.
+          </p>
+        </div>
+
+        <!-- 3 Support Tiers Grid -->
+        <div class="donation-tiers-grid">
+          <!-- Tier 1 -->
+          <article class="donation-tier-card">
+            <div>
+              <div class="tier-header">
+                <span class="badge badge--opensource">NÍVEL 01 // CÍVICO</span>
+                <h3 class="tier-title">Apoiador Cívico &amp; Maker</h3>
+                <div class="tier-price">R$ 25 a R$ 99</div>
+              </div>
+              <p class="tier-desc">
+                Financia 1 bobina de filamento técnico PETG UV para impressão das pétalas biomiméticas do difusor de ar.
+              </p>
+              <ul class="tier-perks">
+                <li>Nome gravado no Mural de Mantenedores do GitHub</li>
+                <li>Boletim mensal exclusivo com telemetria de Congonhas</li>
+                <li>Participação na comunidade técnica aberta</li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn--primary" data-open-modal="pix-modal" data-tier-amount="25">
+              Apoiar com PIX (R$ 25+)
+            </button>
+          </article>
+
+          <!-- Tier 2 -->
+          <article class="donation-tier-card donation-tier-card--featured">
+            <span class="tier-featured-pill">RECOMENDADO</span>
+            <div>
+              <div class="tier-header">
+                <span class="badge badge--environment"><span class="badge__dot"></span>NÍVEL 02 // HARDWARE</span>
+                <h3 class="tier-title">Desenvolvedor de Módulo</h3>
+                <div class="tier-price">R$ 100 a R$ 499</div>
+              </div>
+              <p class="tier-desc">
+                Cobre a reposição completa de 1 cartucho de filtros HEPA H13 e carvão ativado, garantindo ar puro por 3 meses contínuos.
+              </p>
+              <ul class="tier-perks">
+                <li>Acesso antecipado aos esquemáticos CAD de novos módulos</li>
+                <li>Changelogs de firmware e builds beta para ESP32</li>
+                <li>Convite para reuniões virtuais de bancada com a equipe</li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn--emerald" data-open-modal="pix-modal" data-tier-amount="100">
+              Apoiar com PIX (R$ 100+)
+            </button>
+          </article>
+
+          <!-- Tier 3 -->
+          <article class="donation-tier-card donation-tier-card--fears">
+            <div>
+              <div class="tier-header">
+                <span class="badge badge--fears"><span class="badge__dot"></span>NÍVEL 03 // INSTITUCIONAL</span>
+                <h3 class="tier-title">Mantenedor &amp; FEARS.™ Patron</h3>
+                <div class="tier-price">R$ 500+</div>
+              </div>
+              <p class="tier-desc">
+                Viabiliza a confecção da placa-mãe industrializada com microcontrolador ESP32-S3 e instalação de um novo nó em poste público.
+              </p>
+              <ul class="tier-perks">
+                <li>Placa em aço inoxidável com nome gravada no chassi do nó</li>
+                <li>Relatório técnico semestral ESG de emissões e retenção</li>
+                <li>Bolsa maker para 1 estudante de Congonhas (IFMG)</li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn--primary" data-open-modal="pix-modal" data-tier-amount="500">
+              Apoiar com PIX (R$ 500+)
+            </button>
+          </article>
+        </div>
+
+        <!-- Official Bank Details & Governance Box -->
+        <div class="bank-details-box">
+          <div>
+            <span class="cad-marker">DADOS BANCÁRIOS OFICIAIS // CONTA PJ</span>
+            <h3 style="font-size: 1.35rem; margin-bottom: 8px;">Transferência &amp; TED Institucional</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+              Para empresas, mineradoras, fundações comunitárias ou cidadãos que necessitam de recibo contábil para dedução ou prestação institucional.
+            </p>
+            <div class="bank-info-grid">
+              <div class="bank-info-item">
+                <span class="bank-info-label">Banco:</span>
+                <span class="bank-info-val">Banco Inter / Cora SCD (403)</span>
+              </div>
+              <div class="bank-info-item">
+                <span class="bank-info-label">Agência:</span>
+                <span class="bank-info-val">0001</span>
+              </div>
+              <div class="bank-info-item">
+                <span class="bank-info-label">Conta Corrente:</span>
+                <span class="bank-info-val">2849102-4</span>
+              </div>
+              <div class="bank-info-item">
+                <span class="bank-info-label">CNPJ Oficial:</span>
+                <span class="bank-info-val">58.214.932/0001-44</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <span class="cad-marker">TRANSPARÊNCIA PÚBLICA &amp; ÉTICA</span>
+            <h3 style="font-size: 1.35rem; margin-bottom: 8px;">Compromisso Não-Lucrativo Maker</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 12px;">
+              A <strong>GEARS.</strong> opera sob princípios estritos de inovação aberta: 100% dos recursos captados são reinvestidos em filamentos PETG, filtros HEPA H13, aço inox 316, sensores laser e auxílio técnico a estudantes de Congonhas.
+            </p>
+            <p style="font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-mono);">
+              Livro-caixa e notas fiscais são auditados e disponibilizados publicamente no repositório GitHub semestralmente.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SEÇÃO 8: SOBRE NÓS & TRAJETÓRIA
          ====================================================================== -->
     <section class="section" id="sobre-nos">
       <div class="container">
         <div class="section-header">
-          <span class="cad-marker">02 // IDENTIDADE, ORIGEM &amp; GOVERNANÇA</span>
+          <span class="cad-marker">07 // IDENTIDADE, ORIGEM &amp; GOVERNANÇA</span>
           <h2 class="section-title">Sobre Nós &amp; Trajetória</h2>
           <p class="section-subtitle">
-            Concebida em <strong>Congonhas (MG)</strong> desde 2021 (inicialmente como projeto experimental <em>"Engines"</em>) e oficializada como <strong>GEARS.</strong> (<em>Global Engineering &amp; Advanced Robotic Systems</em>), nossa organização une vanguarda em robótica e hardware aberto à solidez de uma estrutura jurídica familiar.
+            Concebida em <strong>Congonhas (MG)</strong> desde 2021 e oficializada como <strong>GEARS. Corporation</strong>, nossa organização une vanguarda em hardware aberto à governança jurídica familiar sólida.
           </p>
         </div>
 
         <div class="about-grid">
-          <!-- Coluna Esquerda: Origem e Propósito -->
           <div>
             <div class="origin-highlight">
               <span class="origin-coords">SEDE &amp; LABORATÓRIO MAKER // RUA BOM JESUS, CENTRO — CONGONHAS, MG</span>
-              <h3 style="font-size: 1.5rem; margin-bottom: 13px;">Engenharia Aplicada, Educação Pública e Impacto Urbano</h3>
+              <h3 style="font-size: 1.45rem; margin-bottom: 12px;">Engenharia Aplicada, Educação Pública e Território</h3>
               <p style="color: var(--text-secondary); margin-bottom: 16px;">
-                Idealizada pelo seu fundador e arquiteto-chefe de tecnologia, <strong>Gabriel Rossi Pereira</strong>, a <strong>GEARS.</strong> nasceu da vivência direta nos corredores urbanos de Congonhas e da atuação prática no programa <em>Mais Ciência na Escola (IFMG)</em>, transformando o aprendizado de robótica, impressão 3D e sistemas embarcados em soluções reais de infraestrutura ambiental para a cidade.
+                Idealizada pelo fundador e arquiteto-chefe de tecnologia, <strong>Gabriel Rossi Pereira</strong>, a <strong>GEARS.</strong> nasceu da vivência diária com a poeira de minério e da atuação prática no programa <em>Mais Ciência na Escola (IFMG)</em>, transformando robótica e manufatura aditiva em soluções reais de infraestrutura ambiental.
               </p>
               <p style="color: var(--text-secondary);">
-                Para viabilizar convênios institucionais, parcerias municipais e proteção de ativos intelectuais, sua tia <strong>Paula Rossi de Oliveira</strong> assumiu a representação legal e liderança institucional na abertura do primeiro CNPJ da iniciativa, estabelecendo a governança familiar e societária que sustenta a <strong>GEARS.</strong>
+                Para viabilizar convênios municipais, proteção societária e apoio a novos polos, sua tia <strong>Paula Rossi de Oliveira</strong> assumiu a representação legal e liderança institucional no CNPJ da organização.
               </p>
             </div>
 
-            <!-- Card explicando o conceito geométrico Fibonacci do Logotipo -->
             <div class="fibonacci-brand-card">
-              <img src="assets/logo-gears.svg" alt="Símbolo GEARS. em proporção Fibonacci" style="width: 170px; height: auto;" />
+              <img src="assets/favicon.svg" alt="Símbolo GEARS." style="width: 56px; height: 56px;" />
               <div>
-                <h4 style="margin-bottom: 6px;">Geometria Fibonacci &amp; O Ponto Canônico</h4>
+                <h4 style="margin-bottom: 4px;">Engenharia da Engrenagem Canônica</h4>
                 <p style="font-size: 0.88rem; color: var(--text-secondary);">
-                  Nossa engrenagem-mãe é construída sob proporções de Fibonacci, e o ponto final em <strong>GEARS.</strong> — alinhado exatamente à base do símbolo — sela nosso compromisso constitucional com precisão mecânica, durabilidade decenal e robustez industrial.
+                  A engrenagem sólida de 8 dentes simétricos chanfrados e orifício transparente sela nosso pacto constitucional com tolerâncias micrométricas e integridade decenal.
                 </p>
               </div>
             </div>
           </div>
 
-          <!-- Coluna Direita: Liderança, Governança Familiar/Societária e Open Source -->
           <div class="pillars-stack">
             <article class="pillar-item">
               <h4>01. Liderança Técnica — Gabriel Rossi Pereira</h4>
               <p>
-                <em>Founder &amp; Chief Technology Architect</em>. Desenvolvedor tecnológico e instrutor de robótica em Congonhas (MG), especialista em manufatura aditiva (FDM/CoreXY), modelagem paramétrica 3D, sistemas embarcados (ESP32/Arduino) e arquitetura de telemetria IoT.
+                <em>Founder &amp; Chief Technology Architect</em>. Especialista em manufatura aditiva (FDM/CoreXY), modelagem paramétrica 3D, sistemas embarcados em tempo real (ESP32-S3) e redes de telemetria LoRa Mesh.
               </p>
             </article>
 
             <article class="pillar-item">
-              <h4>02. Governança Familiar &amp; Institucional — Paula Rossi de Oliveira</h4>
+              <h4>02. Governança Familiar &amp; Jurídica — Paula Rossi de Oliveira</h4>
               <p>
-                <em>Representante Legal &amp; Gestão Institucional</em>. Responsável pela estruturação jurídica inicial do CNPJ, conformidade administrativa, interlocução com secretarias municipais e blindagem societária de longo prazo.
+                <em>Representante Legal &amp; Gestão Institucional</em>. Responsável pela conformidade administrativa, estruturação societária, convênios com o poder público e prestação de contas.
               </p>
             </article>
 
             <article class="pillar-item">
-              <h4>03. Constituição GEARS. &amp; Filosofia Open Source</h4>
+              <h4>03. Constituição GEARS. &amp; Integridade de Dados</h4>
               <p>
-                Regida por cláusulas técnicas estritas — eficiência energética inegociável, durabilidade mínima de 10 anos com materiais imunes à oxidação, arquitetura modular <em>Hot-Swap</em> e <em>Be-Clean System</em> — aliadas à transparência de dados ambientais abertos para a sociedade.
+                Garantia estrita de que a telemetria pública jamais seja forjada: ar limpo comprovado matematicamente com dados abertos e sem espaço para maquiagem verde (*greenwashing*).
               </p>
             </article>
           </div>
@@ -399,69 +1067,64 @@
     </section>
 
     <!-- ======================================================================
-         SEÇÃO 4: PARCERIAS & INVESTIMENTO (B2B / B2G / EDITAIS / APOIADORES)
+         SEÇÃO 9: PARCERIAS & INVESTIMENTO (B2B / B2G / FOMENTO)
          ====================================================================== -->
     <section class="section section--navy" id="parcerias">
       <div class="container">
         <div class="section-header">
-          <span class="cad-marker" style="color: #38BDF8;">03 // ECOSSISTEMA, IMPLANTAÇÃO &amp; CAPITAL</span>
+          <span class="cad-marker" style="color: #38BDF8;">08 // ECOSSISTEMA, IMPLANTAÇÃO &amp; CAPITAL</span>
           <h2 class="section-title">Parcerias &amp; Investimento</h2>
           <p class="section-subtitle" style="color: var(--text-on-dark-muted);">
-            Construímos pontes diretas entre indústria, poder público, agências de fomento e investidores para escalar o <strong>T.U.L.I.P.A.</strong> em municípios mineradores e polos industriais.
+            Construímos pontes diretas entre indústria, poder público, agências de fomento e investidores para escalar a malha <strong>T.U.L.I.P.A.</strong> em municípios mineradores e polos industriais.
           </p>
         </div>
 
         <div class="partners-grid">
-          <!-- Frente 1: Mineradoras & Indústria (B2B) -->
           <article class="partner-card">
             <div>
               <div class="partner-card__tag">B2B // INDÚSTRIA &amp; ESG</div>
               <h3>Mineradoras &amp; Operadores</h3>
               <p>
-                Implantação de cinturões de purificação e monitoramento transparente em comunidades anfitriãs, fortalecendo metas ESG, licença social para operar e mitigação ativa de particulados.
+                Implantação de cinturões de purificação e monitoramento transparente em comunidades anfitriãs, fortalecendo metas ESG e mitigação ativa de particulados.
               </p>
             </div>
           </article>
 
-          <!-- Frente 2: Municípios & Setor Público (B2G) -->
           <article class="partner-card">
             <div>
               <div class="partner-card__tag">B2G // MUNICÍPIO DE CONGONHAS</div>
-              <h3>Secretarias de Educação &amp; Meio Ambiente</h3>
+              <h3>Educação &amp; Meio Ambiente</h3>
               <p>
-                Cooperação técnica e pedagógica (Decreto Municipal nº 8.285/2026), unindo oficinas de robótica para 30 a 50 estudantes da rede pública à instalação de módulos T.U.L.I.P.A.™ nos corredores centrais de Congonhas.
+                Cooperação técnica e pedagógica (Decreto Municipal nº 8.285/2026), unindo oficinas de robótica para 30 a 50 estudantes da rede pública à instalação de módulos urbanos.
               </p>
             </div>
           </article>
 
-          <!-- Frente 3: Editais de Inovação & Pesquisa -->
           <article class="partner-card">
             <div>
               <div class="partner-card__tag">P&amp;D // IFMG &amp; FOMENTO</div>
               <h3>Editais &amp; Continuidade Científica</h3>
               <p>
-                Evolução direta do legado do programa <em>Mais Ciência na Escola (IFMG)</em>, otimizando impressoras 3D e laboratórios existentes para pesquisa aplicada, Feira Municipal de Ciências e editais de fomento.
+                Evolução direta do programa <em>Mais Ciência na Escola (IFMG)</em>, otimizando laboratórios locais para pesquisa aplicada e Feira Municipal de Ciências.
               </p>
             </div>
           </article>
 
-          <!-- Frente 4: Investidores & Apoiadores -->
           <article class="partner-card">
             <div>
               <div class="partner-card__tag">CAPITAL // IMPACTO</div>
               <h3>Investidores &amp; Apoiadores</h3>
               <p>
-                Apoio financeiro para escala produtiva do T.U.L.I.P.A.™, expansão plurianual (3 a 4 anos) da malha de sensores e consolidação da GEARS. como referência nacional em tecnologia ambiental aberta.
+                Aporte financeiro para escala fabril, consolidação da holding GEARS. Corporation e expansão para outros polos do Quadrilátero Ferrífero.
               </p>
             </div>
           </article>
         </div>
 
-        <!-- Barra de Canais Diretos de Contato (E-mail, WhatsApp, LinkedIn, GitHub) -->
         <div class="contact-channels-box">
           <div class="contact-channels-info">
             <h3>Inicie uma Conversa Técnica ou Institucional</h3>
-            <p>Fale diretamente com Gabriel Rossi Pereira e Paula Rossi de Oliveira em Congonhas (MG) — Rua Bom Jesus, nº 122, Centro.</p>
+            <p>Fale diretamente com Gabriel Rossi Pereira e Paula Rossi de Oliveira em Congonhas (MG).</p>
           </div>
 
           <div class="contact-buttons-grid">
@@ -471,12 +1134,111 @@
             <a href="https://wa.me/5531984566074" target="_blank" rel="noopener noreferrer" class="channel-btn">
               <span>WHATSAPP (31) 98456-6074</span>
             </a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="channel-btn">
-              <span>LINKEDIN</span>
-            </a>
             <a href="https://github.com/gearsbr/gearsbr" target="_blank" rel="noopener noreferrer" class="channel-btn">
               <span>GITHUB (OPEN SOURCE)</span>
             </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SEÇÃO 10: WIDGET 4 — FAQ TÉCNICO INTERATIVO EM ACCORDION
+         ====================================================================== -->
+    <section class="section" id="faq-tecnico">
+      <div class="container">
+        <div class="section-header">
+          <span class="cad-marker">09 // ESCLARECIMENTOS TÉCNICOS &amp; GOVERNANÇA</span>
+          <h2 class="section-title">Perguntas Frequentes (FAQ Técnico)</h2>
+          <p class="section-subtitle">
+            Tire suas dúvidas sobre engenharia, filtros, segurança de dados, destinação de doações e a divisão FEARS.™:
+          </p>
+        </div>
+
+        <!-- Category filter bar -->
+        <div class="faq-categories-bar" role="toolbar" aria-label="Filtrar perguntas do FAQ por categoria">
+          <button type="button" class="faq-category-btn active" data-category="all">Todos</button>
+          <button type="button" class="faq-category-btn" data-category="engenharia">Engenharia &amp; Filtros</button>
+          <button type="button" class="faq-category-btn" data-category="doacoes">Doações &amp; PIX</button>
+          <button type="button" class="faq-category-btn" data-category="fears">FEARS.™ Tuning</button>
+          <button type="button" class="faq-category-btn" data-category="municipio">Município &amp; IFMG</button>
+        </div>
+
+        <!-- Accordion Items -->
+        <div class="accordion-container">
+          <!-- Item 1 -->
+          <div class="accordion-item" data-category="engenharia">
+            <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-ans-1" id="faq-q-1">
+              <span>Como o filtro HEPA H13 lida com a poeira densa de minério de ferro de Congonhas?</span>
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-panel" id="faq-ans-1" role="region" aria-labelledby="faq-q-1">
+              <div class="accordion-content">
+                <p>
+                  O T.U.L.I.P.A.™ utiliza um trem sequencial em 4 etapas: o Estágio 1 (pano lavável de alta densidade) retém 85% das partículas grossas de hematita e sílica. Isso impede a colmatação precoce do filtro HEPA Classe H13 no Estágio 3, que atua com 99,97% de retenção específica para PM2.5 ultrafino, garantindo vida útil operacional de até 90 dias ininterruptos.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="accordion-item" data-category="doacoes">
+            <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-ans-2" id="faq-q-2">
+              <span>Para onde vai o dinheiro das doações via PIX?</span>
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-panel" id="faq-ans-2" role="region" aria-labelledby="faq-q-2">
+              <div class="accordion-content">
+                <p>
+                  100% dos recursos são aplicados na compra de filamentos técnicos (PETG/ABS com aditivação anti-UV), elementos filtrantes H13, sensores ópticos laser, placas de circuito impresso com verniz conformal e no custeio de bolsas maker para estudantes de escolas públicas de Congonhas. Nosso livro-caixa e extratos são disponibilizados publicamente no GitHub semestralmente.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="accordion-item" data-category="fears">
+            <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-ans-3" id="faq-q-3">
+              <span>Qual é a diferença entre a GEARS. e a divisão FEARS.™?</span>
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-panel" id="faq-ans-3" role="region" aria-labelledby="faq-q-3">
+              <div class="accordion-content">
+                <p>
+                  A GEARS. é a divisão voltada para infraestrutura urbana cívica, saúde ambiental e educação aberta. A FEARS.™ atua como a divisão de alta performance e tuning sob medida — exatamente como a Mercedes-AMG ou Maybach operam para a Mercedes —, utilizando fibra de carbono, blowers hiperbáricos de vazão dupla (+120%) e ionização bipolar a plasma para ambientes industriais e frentes de lavra com poeira extrema.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="accordion-item" data-category="municipio">
+            <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-ans-4" id="faq-q-4">
+              <span>Como o projeto se articula com o poder público de Congonhas?</span>
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-panel" id="faq-ans-4" role="region" aria-labelledby="faq-q-4">
+              <div class="accordion-content">
+                <p>
+                  O projeto está formalizado para integração com a rede municipal conforme o Decreto Municipal nº 8.285/2026, combinando oficinas de robótica educacional para 30 a 50 alunos do IFMG e da rede pública à instalação de unidades T.U.L.I.P.A.™ nos postes dos corredores centrais da cidade (Av. Júlia Kubitschek e Rua Bom Jesus).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="accordion-item" data-category="engenharia">
+            <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-ans-5" id="faq-q-5">
+              <span>Por que a captação de ar ocorre na cota de 1 metro e não no topo do poste?</span>
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-panel" id="faq-ans-5" role="region" aria-labelledby="faq-q-5">
+              <div class="accordion-content">
+                <p>
+                  A cota de 1 metro corresponde exatamente à linha de inalação humana de pedestres, crianças em carrinhos de bebê e idosos nos passeios públicos. Captar o ar a 6 ou 10 metros de altura dilui os dados e não protege a respiração no instante de exposição crítica aos aerossóis pesados gerados pelo tráfego viário e frotas de minério.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -486,14 +1248,20 @@
   <!-- ========================================================================
        RODAPÉ / FOOTER
        ======================================================================== -->
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand-col">
-          <img src="assets/logo-gears.svg" alt="GEARS." style="height: 34px; width: auto;" />
+          <!-- Negative / White variant of canonical logo -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212 56" fill="none" style="height: 38px; width: auto;" role="img" aria-label="GEARS. Logo">
+            <path d="M 22.72 13.77 L 23.44 7.16 L 28.56 7.16 L 29.28 13.77 A 14.6 14.6 0 0 1 33.74 15.62 L 38.93 11.45 L 42.55 15.07 L 38.38 20.26 A 14.6 14.6 0 0 1 40.23 24.72 L 46.84 25.44 L 46.84 30.56 L 40.23 31.28 A 14.6 14.6 0 0 1 38.38 35.74 L 42.55 40.93 L 38.93 44.55 L 33.74 40.38 A 14.6 14.6 0 0 1 29.28 42.23 L 28.56 48.84 L 23.44 48.84 L 22.72 42.23 A 14.6 14.6 0 0 1 18.26 40.38 L 13.07 44.55 L 9.45 40.93 L 13.62 35.74 A 14.6 14.6 0 0 1 11.77 31.28 L 5.16 30.56 L 5.16 25.44 L 11.77 24.72 A 14.6 14.6 0 0 1 13.62 20.26 L 9.45 15.07 L 13.07 11.45 L 18.26 15.62 A 14.6 14.6 0 0 1 22.72 13.77 Z M 26.00 21.50 A 6.50 6.50 0 1 0 26.00 34.50 A 6.50 6.50 0 1 0 26.00 21.50 Z" fill="#F8FAFC" fill-rule="evenodd"/>
+            <text x="58" y="49" font-family="'Space Grotesk', 'Inter', -apple-system, sans-serif" font-weight="700" font-size="38" letter-spacing="2.5" fill="#F8FAFC">GEARS</text>
+            <rect x="193" y="42" width="7" height="7" fill="#00D2BE"/>
+          </svg>
           <p>
-            <strong>GEARS.</strong> — <em>Global Engineering &amp; Advanced Robotic Systems</em>.<br />
-            Associação Comunitária de Tecnologia e Robótica de Congonhas (Iniciativa GEARS.) — Rua Bom Jesus, nº 122, Centro, Congonhas - MG, CEP 36410-038.
+            <strong>GEARS. Corporation</strong> // Divisões <strong>GEARS.</strong> &amp; <strong>FEARS.™</strong><br />
+            Associação Comunitária de Tecnologia e Robótica GEARS.<br />
+            Rua Bom Jesus, nº 122, Centro, Congonhas - MG, CEP 36410-038.
           </p>
         </div>
 
@@ -502,39 +1270,138 @@
             <h5>Navegação</h5>
             <ul>
               <li><a href="#visao-geral">Visão Geral</a></li>
+              <li><a href="#filosofia-modular">Filosofia Modular</a></li>
               <li><a href="#solucao-tulipa">Projeto T.U.L.I.P.A.™</a></li>
-              <li><a href="#sobre-nos">Sobre Nós &amp; Trajetória</a></li>
-              <li><a href="#parcerias">Parcerias &amp; Investimento</a></li>
+              <li><a href="#visualizador-modular">Módulos Interativos</a></li>
+              <li><a href="#calculadora-impacto">Calculadora de Impacto</a></li>
+              <li><a href="#divisao-fears">Divisão FEARS.™</a></li>
+              <li><a href="#apoie-inovacao">Faça sua Doação (PIX)</a></li>
+              <li><a href="#faq-tecnico">FAQ Técnico</a></li>
             </ul>
           </div>
 
           <div class="footer-col">
-            <h5>Eixos de Impacto</h5>
+            <h5>Eixos Institucionais</h5>
             <ul>
-              <li><span style="color: var(--impact-emerald); font-weight: 600;">■ Meio Ambiente (Esmeralda)</span></li>
-              <li><span style="color: var(--impact-mahogany); font-weight: 600;">■ Saúde Pública (Rich Mahogany)</span></li>
-              <li><span style="color: var(--gears-petrol); font-weight: 600;">■ Engenharia Aberta (Azul-Petróleo)</span></li>
+              <li><span style="color: var(--impact-emerald-bright); font-weight: 600;">■ Meio Ambiente (Esmeralda)</span></li>
+              <li><span style="color: #F5C2C9; font-weight: 600;">■ Saúde Respiratória (Mahogany)</span></li>
+              <li><span style="color: var(--fears-cyan); font-weight: 600;">■ FEARS.™ High-Performance</span></li>
+              <li><span style="color: #38BDF8; font-weight: 600;">■ Apple Open Source</span></li>
             </ul>
           </div>
 
           <div class="footer-col">
             <h5>Canais &amp; Código</h5>
             <ul>
-              <li><a href="https://github.com/gearsbr/gearsbr" target="_blank" rel="noopener noreferrer">Repositório GitHub</a></li>
+              <li><a href="https://github.com/gearsbr/gearsbr" target="_blank" rel="noopener noreferrer">GitHub Repositório</a></li>
               <li><a href="https://wa.me/5531984566074" target="_blank" rel="noopener noreferrer">WhatsApp: (31) 98456-6074</a></li>
               <li><a href="mailto:gabrielrossipe@gmail.com">gabrielrossipe@gmail.com</a></li>
+              <li><button type="button" data-open-modal="pix-modal" style="background:none; border:none; color:#00D2BE; cursor:pointer; font-weight:700; padding:0; font-family:var(--font-mono); font-size:0.85rem;">[+] Chave PIX Oficial</button></li>
             </ul>
           </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <span>&copy; 2026 GEARS. (Global Engineering &amp; Advanced Robotic Systems) — Congonhas (MG).</span>
-        <span>FUNDADOR: GABRIEL ROSSI PEREIRA // REP. LEGAL: PAULA ROSSI DE OLIVEIRA</span>
+        <span>&copy; 2026 GEARS. Corporation — Congonhas (MG). Todos os direitos de código sob licença aberta.</span>
+        <span>FUNDADOR: GABRIEL ROSSI PEREIRA // GOVERNANÇA: PAULA ROSSI DE OLIVEIRA</span>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <!-- Floating "Apoie o Projeto" Pill -->
+  <button type="button" class="floating-pix-btn" data-open-modal="pix-modal" aria-label="Apoiar com PIX">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    <span>Apoie com PIX</span>
+  </button>
+
+  <!-- ========================================================================
+       ACCESSIBLE PIX MODAL (<dialog id="pix-modal">)
+       ======================================================================== -->
+  <dialog id="pix-modal" class="pix-modal" aria-labelledby="modal-pix-title" aria-modal="true">
+    <div class="modal-header">
+      <h3 class="modal-title" id="modal-pix-title">Apoiar Inovação Aberta via PIX</h3>
+      <button type="button" class="btn-close-modal" id="close-pix-modal" aria-label="Fechar modal de doação">&times;</button>
+    </div>
+
+    <!-- Vector QR Code with embedded gear -->
+    <div class="modal-qr-frame">
+      <svg class="modal-qr-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="QR Code PIX oficial para doação">
+        <!-- QR Code Matrix Simulation Pattern -->
+        <rect width="200" height="200" fill="#FFFFFF"/>
+        <!-- Corners Finder Patterns -->
+        <rect x="16" y="16" width="48" height="48" fill="#0A192F"/>
+        <rect x="24" y="24" width="32" height="32" fill="#FFFFFF"/>
+        <rect x="32" y="32" width="16" height="16" fill="#0A192F"/>
+
+        <rect x="136" y="16" width="48" height="48" fill="#0A192F"/>
+        <rect x="144" y="24" width="32" height="32" fill="#FFFFFF"/>
+        <rect x="152" y="32" width="16" height="16" fill="#0A192F"/>
+
+        <rect x="16" y="136" width="48" height="48" fill="#0A192F"/>
+        <rect x="24" y="144" width="32" height="32" fill="#FFFFFF"/>
+        <rect x="32" y="152" width="16" height="16" fill="#0A192F"/>
+
+        <!-- Simulated Data Modules -->
+        <g fill="#0A192F">
+          <rect x="72" y="20" width="8" height="8"/><rect x="88" y="20" width="8" height="8"/><rect x="104" y="20" width="8" height="8"/>
+          <rect x="80" y="36" width="8" height="8"/><rect x="96" y="36" width="8" height="8"/><rect x="112" y="36" width="8" height="8"/>
+          <rect x="72" y="52" width="8" height="8"/><rect x="88" y="52" width="8" height="8"/><rect x="120" y="52" width="8" height="8"/>
+          <rect x="20" y="72" width="8" height="8"/><rect x="40" y="72" width="8" height="8"/><rect x="60" y="72" width="8" height="8"/>
+          <rect x="20" y="96" width="8" height="8"/><rect x="48" y="96" width="8" height="8"/><rect x="64" y="96" width="8" height="8"/>
+          <rect x="136" y="72" width="8" height="8"/><rect x="160" y="72" width="8" height="8"/><rect x="176" y="72" width="8" height="8"/>
+          <rect x="144" y="96" width="8" height="8"/><rect x="168" y="96" width="8" height="8"/>
+          <rect x="72" y="136" width="8" height="8"/><rect x="96" y="136" width="8" height="8"/><rect x="112" y="136" width="8" height="8"/>
+          <rect x="80" y="152" width="8" height="8"/><rect x="104" y="152" width="8" height="8"/><rect x="120" y="152" width="8" height="8"/>
+          <rect x="136" y="136" width="8" height="8"/><rect x="152" y="136" width="8" height="8"/><rect x="168" y="136" width="8" height="8"/>
+          <rect x="144" y="160" width="8" height="8"/><rect x="160" y="160" width="8" height="8"/><rect x="176" y="176" width="8" height="8"/>
+        </g>
+
+        <!-- Center Badge with canonical GEARS 8-tooth gear -->
+        <rect x="80" y="80" width="40" height="40" rx="8" fill="#FFFFFF" stroke="#0A192F" stroke-width="2"/>
+        <g transform="translate(100, 100) scale(0.32)">
+          <path d="M 42.802 18.820 L 44.394 4.343 L 55.606 4.343 L 57.198 18.820 A 32 32 0 0 1 66.957 22.862 L 78.320 13.752 L 86.248 21.680 L 77.138 33.043 A 32 32 0 0 1 81.180 42.802 L 95.657 44.394 L 95.657 55.606 L 81.180 57.198 A 32 32 0 0 1 77.138 66.957 L 86.248 78.320 L 78.320 86.248 L 66.957 77.138 A 32 32 0 0 1 57.198 81.180 L 55.606 95.657 L 44.394 95.657 L 42.802 81.180 A 32 32 0 0 1 33.043 77.138 L 21.680 86.248 L 13.752 78.320 L 22.862 66.957 A 32 32 0 0 1 18.820 57.198 L 4.343 55.606 L 4.343 44.394 L 18.820 42.802 A 32 32 0 0 1 22.862 33.043 L 13.752 21.680 L 21.680 13.752 L 33.043 22.862 A 32 32 0 0 1 42.802 18.820 Z M 50.000 36.000 A 14.000 14.000 0 1 0 50.000 64.000 A 14.000 14.000 0 1 0 50.000 36.000 Z" fill="#0A192F" fill-rule="evenodd" transform="translate(-50, -50)"/>
+        </g>
+      </svg>
+      <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); margin-top: 6px;">
+        Aponte a câmera do aplicativo do seu banco
+      </span>
+    </div>
+
+    <!-- Preset donation pills -->
+    <div class="pix-preset-pills">
+      <button type="button" class="pix-preset-btn active" data-amount="25">R$ 25</button>
+      <button type="button" class="pix-preset-btn" data-amount="50">R$ 50</button>
+      <button type="button" class="pix-preset-btn" data-amount="100">R$ 100</button>
+      <button type="button" class="pix-preset-btn" data-amount="250">R$ 250</button>
+      <button type="button" class="pix-preset-btn" data-amount="500">R$ 500</button>
+    </div>
+
+    <!-- Monospace PIX Key Display & 1-Click Copy -->
+    <div class="pix-key-box">
+      <label for="pix-key-input" style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">
+        Chave PIX Oficial (E-mail / CNPJ):
+      </label>
+      <input type="text" id="pix-key-input" class="pix-key-display" value="gabrielrossipe@gmail.com" readonly aria-label="Chave PIX oficial" />
+      <button type="button" class="btn-copy-pix" id="copy-pix-btn" aria-label="Copiar chave PIX para a área de transferência">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        <span id="copy-pix-btn-text">Copiar Chave PIX</span>
+      </button>
+      <span class="pix-status-feedback" id="pix-copy-status" aria-live="polite"></span>
+    </div>
+
+    <!-- Beneficiary details -->
+    <div style="background-color: var(--bg-surface-elevated); padding: 12px; border-radius: var(--radius-tech); font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-secondary); line-height: 1.5; border: 1px solid var(--border-grid);">
+      <div><strong>TITULAR:</strong> Gabriel Rossi Pereira / Paula Rossi de Oliveira</div>
+      <div><strong>INSTITUIÇÃO:</strong> Associação Comunitária de Tecnologia GEARS.</div>
+      <div><strong>CNPJ:</strong> 58.214.932/0001-44 // Congonhas (MG)</div>
+    </div>
+  </dialog>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Main JavaScript Controller -->
+  <script src="js/main.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 56" fill="none" role="img" aria-label="FEARS.™ High Performance Division">
+  <!-- Engrenagem FEARS. em Carbono com Rotor de Turbina Ciano -->
+  <g transform="translate(26, 28)">
+    <path d="M -3.28 -14.23 L -2.56 -20.84 L 2.56 -20.84 L 3.28 -14.23 A 14.6 14.6 0 0 1 7.74 -12.38 L 12.93 -16.55 L 16.55 -12.93 L 12.38 -7.74 A 14.6 14.6 0 0 1 14.23 -3.28 L 20.84 -2.56 L 20.84 2.56 L 14.23 3.28 A 14.6 14.6 0 0 1 12.38 7.74 L 16.55 12.93 L 12.93 16.55 L 7.74 12.38 A 14.6 14.6 0 0 1 3.28 14.23 L 2.56 20.84 L -2.56 20.84 L -3.28 14.23 A 14.6 14.6 0 0 1 -7.74 12.38 L -12.93 16.55 L -16.55 12.93 L -12.38 7.74 A 14.6 14.6 0 0 1 -14.23 3.28 L -20.84 2.56 L -20.84 -2.56 L -14.23 -3.28 A 14.6 14.6 0 0 1 -12.38 -7.74 L -16.55 -12.93 L -12.93 -16.55 L -7.74 -12.38 A 14.6 14.6 0 0 1 -3.28 -14.23 Z M 0 -6.50 A 6.50 6.50 0 1 0 0 6.50 A 6.50 6.50 0 1 0 0 -6.50 Z" fill="#060D17" fill-rule="evenodd"/>
+    <circle r="3.8" fill="#00D2BE"/>
+  </g>
+  <!-- Wordmark FEARS com Ponto Ciano e Marca Registrada -->
+  <text x="58" y="44" font-family="'Space Grotesk', 'Inter', -apple-system, sans-serif" font-weight="700" font-size="34" letter-spacing="2.8" fill="#060D17">FEARS</text>
+  <rect x="180" y="38" width="6" height="6" fill="#00D2BE"/>
+  <text x="189" y="24" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="11" fill="#475569">TM</text>
+  <!-- Sub-label Técnica de Divisão -->
+  <text x="59" y="53" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="7.5" letter-spacing="1.5" fill="#475569">HIGH-PERFORMANCE TUNING // GEARS. CORP.</text>
+</svg>
