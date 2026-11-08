@@ -173,8 +173,8 @@ PARAMS = {
     "SOCK_Z_START": 8.50,                    # Base inferior da capa de silicone (mm)
     "SOCK_Z_END": 24.50,                     # Topo superior da capa de silicone (mm)
     "SOCK_TOTAL_HEIGHT": 16.00,              # Altura vertical total da bota protetora (mm)
-    "SOCK_BOTTOM_APERTURE_DIA": 6.00,        # Orifício inferior permitindo saída livre da ponta do bico (mm)
-    "SOCK_BOTTOM_APERTURE_RADIUS": 3.00,     # Raio da abertura inferior (mm)
+    "SOCK_BOTTOM_APERTURE_DIA": 12.00,       # Orifício inferior permitindo saída livre do colar do bico (mm)
+    "SOCK_BOTTOM_APERTURE_RADIUS": 6.00,     # Raio da abertura inferior (mm)
     "SOCK_WALL_THICKNESS": 0.90,             # Espessura nominal da parede de silicone fluoro-elastomérico (mm)
 
     # Grupo 11: Bico Monobloco Diamond Bay Orientado para BAIXO (-Z)
@@ -652,7 +652,7 @@ def build_gears_hotend_assembly():
         Vector(0, 0, 1)
     )
 
-    # Abertura inferior de 6.00mm de diâmetro para saída livre da ponta do bico Diamond Bay
+    # Abertura inferior de 12.00mm de diâmetro para saída livre do colar do bico Diamond Bay
     sock_bottom_exit = Part.makeCylinder(
         PARAMS["SOCK_BOTTOM_APERTURE_RADIUS"],
         2.00,
@@ -668,7 +668,7 @@ def build_gears_hotend_assembly():
         Vector(PARAMS["SOCK_OUTER_RADIUS"] - 3.0, -1.5, PARAMS["SOCK_Z_END"] - 7.0)
     )
 
-    silicone_sock = sock_outer_cyl.cut(sock_cavity).cut(sock_bottom_exit).cut(sock_wire_notch)
+    silicone_sock = sock_outer_cyl.cut(sock_cavity).cut(sock_bottom_exit).cut(sock_wire_notch).cut(core_monobloc)
 
     # ==============================================================================
     # 12. VERIFICAÇÃO GEOMÉTRICA & INTEGRIDADE TOPOLÓGICA BRep
@@ -678,6 +678,12 @@ def build_gears_hotend_assembly():
     assert fan_mounted.isValid(), "ERRO CRÍTICO: Montagem da ventoinha é topologicamente inválida!"
     assert piezo_sensor.isValid(), "ERRO CRÍTICO: Sensor piezoelétrico é topologicamente inválido!"
     assert silicone_sock.isValid(), "ERRO CRÍTICO: Capa de silicone é topologicamente inválida!"
+    assert len(silicone_sock.Solids) == 1, f"ERRO CRÍTICO: Capa de silicone deve ter exatamente 1 sólido, possui {len(silicone_sock.Solids)}!"
+
+    # Verificação de interferência e colisão nula (0.000000 mm³)
+    assert core_monobloc.common(silicone_sock).Volume < 1e-6, f"ERRO CRÍTICO: Colisão detectada entre bico e silicone sock: {core_monobloc.common(silicone_sock).Volume:.6f} mm^3!"
+    assert core_monobloc.common(fan_mounted).Volume < 1e-6, f"ERRO CRÍTICO: Colisão detectada entre bico e ventoinha: {core_monobloc.common(fan_mounted).Volume:.6f} mm^3!"
+    assert core_monobloc.common(piezo_sensor).Volume < 1e-6, f"ERRO CRÍTICO: Colisão detectada entre bico e piezo: {core_monobloc.common(piezo_sensor).Volume:.6f} mm^3!"
 
     bb_core = core_monobloc.BoundBox
     bb_fan = fan_mounted.BoundBox
